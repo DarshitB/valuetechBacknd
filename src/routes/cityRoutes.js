@@ -8,7 +8,7 @@ const checkPermission = require("../middleware/permission"); // Middleware to ch
 const beforeUpdateLogger = require("../middleware/beforeUpdateLogger"); // Middleware to store old data on local temporary for add activity log
 const activityLogger = require("../middleware/activityLogger"); // Middleware to log user activity
 
-router.use(auth); // Apply authentication middleware to all routes
+/* router.use(auth);  */// Apply authentication middleware to all routes
 
 // e.g. add middleware like auth or permission here if needed
 router.get("/", cityController.getAll);
