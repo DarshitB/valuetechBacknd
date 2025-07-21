@@ -75,6 +75,7 @@ const { getDeviceDetails } = require("../utils/deviceData");
 exports.login = async (req, res, next) => {
   try {
     const { username, password } = req.body;
+    console.log("Login route hit", req.body);
 
     // ✅ Validate required fields
     if (!username || !password) {
