@@ -76,7 +76,7 @@ exports.login = async (req, res, next) => {
   try {
     const { username, password } = req.body;
     console.log("🔵 Step 1: Got login data", req.body);
-    console.log("🔴");
+    console.log("🔴", username);
 
     // ✅ Validate required fields
     if (!username || !password) {
@@ -85,8 +85,14 @@ exports.login = async (req, res, next) => {
     }
 
     // ✅ Find user by username
-    const user = await User.findByUsernameOrMobile(username);
-    console.log("🔵 Step 2: User fetched", user);
+    let user;
+    try {
+      user = await User.findByUsernameOrMobile(username);
+      console.log("🔵 Step 2: User fetched", user);
+    } catch (e) {
+      console.error("🔴 Error in findByUsernameOrMobile:", e.message);
+      throw new Error("Internal error while finding user.");
+    }
     if (!user) {
       console.log("🔴 User not found");
       throw new NotFoundError("User not found");
