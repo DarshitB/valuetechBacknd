@@ -18,6 +18,7 @@ const corsOptions = {
     "http://localhost:3000",
     "http://valuetech.eu-4.evennode.com",
     "https://valuetechbacknd.onrender.com",
+    "http://new.valuetechsolutions.org"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: false,
