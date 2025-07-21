@@ -25,7 +25,8 @@
     "psql": "^0.0.1",
     "sequelize": "^6.37.7",
     "ua-parser-js": "^2.0.4",
-    "winston": "^3.17.0"
+    "winston": "^3.17.0",
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
