@@ -26,7 +26,10 @@ module.exports = {
       user: process.env.DB_PROD_USER,
       password: process.env.DB_PROD_PASSWORD,
       database: process.env.DB_PROD_NAME,
-      ssl: process.env.DB_PROD_SSL === "true",
+      ssl:
+        process.env.DB_PROD_SSL === "true"
+          ? { rejectUnauthorized: false }
+          : false, // ✅ FIXED
     },
     migrations: {
       directory: "./migrations",
