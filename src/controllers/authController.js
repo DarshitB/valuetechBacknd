@@ -75,50 +75,34 @@ const { getDeviceDetails } = require("../utils/deviceData");
 exports.login = async (req, res, next) => {
   try {
     const { username, password } = req.body;
-    console.log("🔵 Step 1: Got login data", req.body);
-    console.log("🔴", username);
 
     // ✅ Validate required fields
     if (!username || !password) {
-      console.log("🔴 Missing fields");
       throw new BadRequestError("Username and password are required");
     }
 
     // ✅ Find user by username
-    let user;
-    try {
-      user = await User.findByUsernameOrMobile(username);
-      console.log("🔵 Step 2: User fetched", user);
-    } catch (e) {
-      console.error("🔴 Error in findByUsernameOrMobile:", e.message);
-      throw new Error("Internal error while finding user.");
-    }
+    const user = await User.findByUsernameOrMobile(username);
     if (!user) {
-      console.log("🔴 User not found");
       throw new NotFoundError("User not found");
     }
 
     // ✅ Compare hashed password
     const isPasswordValid = await bcrypt.compare(password, user.password);
-    console.log("🔵 Step 3: Password check", isPasswordValid);
     if (!isPasswordValid) {
-      console.log("🔴 Invalid password");
       throw new BadRequestError("Invalid password");
     }
 
     // ✅ Get user role & permissions
     const role = await Role.findById(user.role_id);
-    console.log("🔵 Step 4: Role fetched", role);
     let permissions = [];
 
     if (role.name === "developer_admin") {
       // Developer admin gets all permissions
       permissions = await db("permissions").select("name");
-      console.log("🔵 Step 5A: All permissions fetched");
     } else {
       // Get permissions assigned to this role
       permissions = await Role.getPermissions(role.id);
-      console.log("🔵 Step 5B: Role-based permissions", permissions);
     }
 
     // ✅ Log activity
@@ -133,14 +117,14 @@ exports.login = async (req, res, next) => {
         device_info: getDeviceDetails(req),
       },
     });
-    console.log("🔵 Step 6: Activity log inserted");
+
     // ✅ Generate JWT Token
     const token = jwt.sign(
       { userId: user.id, roleId: user.role_id },
       process.env.JWT_SECRET,
       { expiresIn: "3h" }
     );
-    console.log("🔵 Step 7: Token generated");
+
     // ✅ Send response (only token for now)
     res.json({ token });
 

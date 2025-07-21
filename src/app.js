@@ -20,7 +20,7 @@ const corsOptions = {
     "https://valuetechbacknd.onrender.com",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  credentials: true,
+  credentials: false,
 };
 
 // ✅ Apply CORS to all routes properly
