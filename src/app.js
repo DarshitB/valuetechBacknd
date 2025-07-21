@@ -14,7 +14,11 @@ const cityRoutes = require("./routes/cityRoutes");
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "http://valuetech.eu-4.evennode.com"],
+  origin: [
+    "http://localhost:3000",
+    "http://valuetech.eu-4.evennode.com",
+    "https://valuetechbacknd.onrender.com",
+  ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
 };
