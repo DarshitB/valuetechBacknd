@@ -82,7 +82,15 @@ exports.login = async (req, res, next) => {
     }
 
     // ✅ Find user by username
-    const user = await User.findByUsernameOrMobile(username);
+      let user;
+    try {
+      user = await User.findByUsernameOrMobile(username);
+      console.log("🔵 Step 2: User fetched", user);
+    } catch (e) {
+      console.error("🔴 Error in findByUsernameOrMobile:", e.message);
+      throw new Error("Internal error while finding user.");
+    }
+
     if (!user) {
       throw new NotFoundError("User not found");
     }
