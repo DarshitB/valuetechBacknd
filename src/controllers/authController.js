@@ -76,6 +76,7 @@ exports.login = async (req, res, next) => {
   try {
     const { username, password } = req.body;
     console.log("🔵 Step 1: Got login data", req.body);
+    console.log("🔴");
 
     // ✅ Validate required fields
     if (!username || !password) {
