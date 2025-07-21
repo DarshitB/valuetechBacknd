@@ -30,7 +30,6 @@ module.exports = {
         process.env.DB_PROD_SSL === "true"
           ? { rejectUnauthorized: false }
           : false, // ✅ FIXED
-      family: 4,
     },
     migrations: {
       directory: "./migrations",

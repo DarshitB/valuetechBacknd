@@ -62,3 +62,4 @@
 2025-07-21 21:02:00 | ERROR | Error: User not found
     at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:95:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-21 21:10:06 | INFO | Environment: production
