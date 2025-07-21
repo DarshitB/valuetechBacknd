@@ -16,7 +16,7 @@ const app = express();
 const corsOptions = {
   origin: [
     "http://localhost:3000",
-    "http://new.valuetechsolutions.org",
+    "https://new.valuetechsolutions.org",
     "https://valuetechbacknd.onrender.com",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
