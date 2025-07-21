@@ -20,8 +20,7 @@ npx knex seed:run
 
 knex seed:run --env production
 
-# check connection with supabase database
-psql "postgres://postgres:dr04LeEQaJweucXc@db.ruzlbabkzaillsgrbqvu.supabase.co:5432/postgres?sslmode=require"
-
-
-postgresql://postgres:7pKNMOuV3X4mbLNy@db.sbohtnnailsqhuooupqg.supabase.co:5432/postgres
+# to remove all git branch from windows
+Remove-Item -Recurse -Force .git
+# Confirm delete
+Get-ChildItem -Force 

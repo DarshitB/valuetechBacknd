@@ -13,7 +13,24 @@ const cityRoutes = require("./routes/cityRoutes");
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: ["http://localhost:3000", "http://valuetech.eu-4.evennode.com"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true,
+};
+
+// ✅ Apply CORS to all routes properly
+app.use(cors(corsOptions));
+
+// ✅ Fix: Handle OPTIONS preflight *with method, not wildcard path*
+app.use((req, res, next) => {
+  if (req.method === "OPTIONS") {
+    res.sendStatus(200); // reply OK to preflight request
+  } else {
+    next();
+  }
+});
+
 app.use(express.json());
 
 // Routes
