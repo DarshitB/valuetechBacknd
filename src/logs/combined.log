@@ -41,3 +41,17 @@
 2025-07-21 19:07:48 | INFO | Environment: development
 2025-07-21 19:21:01 | INFO | Environment: development
 2025-07-21 19:22:33 | INFO | Environment: development
+2025-07-21 19:28:27 | INFO | Environment: production
+2025-07-21 19:30:36 | ERROR | Error: Internal error while finding user.
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:94:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-21 19:55:57 | INFO | Environment: production
+2025-07-21 19:56:04 | INFO | Environment: production
+2025-07-21 19:56:39 | INFO | Environment: development
+2025-07-21 19:56:52 | INFO | Environment: production
+2025-07-21 19:57:04 | INFO | Environment: production
+2025-07-21 19:59:36 | INFO | Environment: production
+2025-07-21 20:00:01 | INFO | Environment: production
+2025-07-21 20:00:38 | INFO | Environment: production
+2025-07-21 20:04:19 | INFO | Environment: production
+2025-07-21 20:06:06 | INFO | Environment: production

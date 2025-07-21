@@ -22,7 +22,7 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: false,
 };
- 
+
 // ✅ Apply CORS to all routes properly
 app.use(cors(corsOptions));
 
