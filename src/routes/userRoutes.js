@@ -1,0 +1,39 @@
+const express = require("express");
+const router = express.Router();
+
+const userController = require("../controllers/userController");
+
+const auth = require("../middleware/auth"); // Middleware to check authentication
+const checkPermission = require("../middleware/permission"); // Middleware to check user permissions
+const beforeUpdateLogger = require("../middleware/beforeUpdateLogger"); // Middleware to store old data on local temporary for add activity log
+const activityLogger = require("../middleware/activityLogger"); // Middleware to log user activity
+const protectIfProtectedRole = require("../middleware/protectIfProtectedRole"); // Middleware to protect routes for protected roles
+
+router.use(auth); // Apply authentication middleware to all routes
+
+router.get("/", userController.getAll);
+router.get("/:id", userController.getById);
+router.get("/mobile/:mobile", userController.findByMobile);
+router.post(
+  "/",
+  checkPermission("add_user"),
+  activityLogger("users", (req, res) => res.locals.newRecordId),
+  userController.create
+);
+router.put(
+  "/:id",
+  protectIfProtectedRole,
+  checkPermission("edit_user"),
+  beforeUpdateLogger("users", (req) => req.params.id),
+  activityLogger("users", (req) => req.params.id),
+  userController.update
+);
+router.delete(
+  "/:id",
+  protectIfProtectedRole,
+  checkPermission("delete_user"),
+  activityLogger("users", (req) => req.params.id),
+  userController.softDelete
+);
+
+module.exports = router;

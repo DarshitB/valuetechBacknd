@@ -1,0 +1,13 @@
+2025-07-21 15:54:20 | ERROR | error: insert into "activity_logs" ("action", "metadata", "record_id", "table_name", "user_id") values ($1, $2, $3, $4, $5) - insert or update on table "activity_logs" violates foreign key constraint "activity_logs_user_id_foreign"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-21 15:54:31 | ERROR | Error: User not found
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:87:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
