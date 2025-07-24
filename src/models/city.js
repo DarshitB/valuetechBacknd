@@ -50,6 +50,15 @@ const city = {
       deleted_at: new Date(),
       deleted_by: userId,
     }),
+
+  findByNameAndState: (name, state_id) =>
+    db("cities")
+      .select("id")
+      .whereRaw("LOWER(name) = LOWER(?)", [name.trim()])
+      .andWhere("state_id", state_id)
+      .whereNull("deleted_at")
+      .where("is_active", true)
+      .first(),
 };
 
 module.exports = city;

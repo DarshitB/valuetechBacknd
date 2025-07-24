@@ -10,15 +10,17 @@ const userRoutes = require("./routes/userRoutes");
 const permissionRoutes = require("./routes/permissionRoutes");
 const stateRoutes = require("./routes/stateRoutes");
 const cityRoutes = require("./routes/cityRoutes");
+const bankRoutes = require("./routes/bankRoutes");
+const bankBranchRoutes = require("./routes/bankBranchRoutes");
 
 const app = express();
 
 const corsOptions = {
   origin: [
-    "http://localhost:3000/",
-    "https://new.valuetechsolutions.org/",
-    "http://new.valuetechsolutions.org/",
-    "https://valuetechbacknd.onrender.com/",
+    "http://localhost:3000",
+    "https://new.valuetechsolutions.org",
+    "http://new.valuetechsolutions.org",
+    "https://valuetechbacknd.onrender.com",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
@@ -45,6 +47,8 @@ app.use("/api/users", userRoutes);
 app.use("/api/permissions", permissionRoutes);
 app.use("/api/states", stateRoutes);
 app.use("/api/cities", cityRoutes);
+app.use("/api/bank", bankRoutes);
+app.use("/api/bank-branch", bankBranchRoutes);
 
 app.use(errorHandler); // Error handling middleware
 

@@ -31,6 +31,9 @@ exports.create = async (req, res, next) => {
     const { name } = req.body;
     if (!name) throw new BadRequestError("State name is required");
 
+    const existing = await State.findByName(name);
+    if (existing) throw new ConflictError("State name already exists");
+
     // Create the new state (returns inserted record or ID)
     const [state] = await State.create({
       name,
@@ -64,6 +67,10 @@ exports.update = async (req, res, next) => {
 
     const existing = await State.findById(id);
     if (!existing) throw new NotFoundError("State not found");
+
+    const duplicate = await State.findByName(name);
+    if (duplicate && duplicate.id !== Number(id))
+      throw new ConflictError("State name already exists");
 
     const [updated] = await State.update(id, {
       name,

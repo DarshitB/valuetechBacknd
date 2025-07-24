@@ -22,6 +22,19 @@ exports.seed = async function (knex) {
     "add_cities",
     "edit_cities",
     "delete_cities",
+    
+    "view_bank",
+    "add_bank",
+    "edit_bank",
+    "delete_bank",
+    "view_bank_branch",
+    "add_bank_branch",
+    "edit_bank_branch",
+    "delete_bank_branch",
+    "view_branch_officer",
+    "add_branch_officer",
+    "edit_branch_officer",
+    "delete_branch_officer",
   ];
 
   // Insert permissions
@@ -37,7 +50,7 @@ exports.seed = async function (knex) {
     .first();
 
   // Assign all permissions to developer_admin
- /*  for (const permission_id of allPermissionIds) {
+  /*  for (const permission_id of allPermissionIds) {
     await knex("role_permissions").insert({
       role_id: developerAdminRole.id,
       permission_id,

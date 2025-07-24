@@ -11,10 +11,7 @@ const protectIfProtectedRole = require("../middleware/protectIfProtectedRole"); 
 router.use(auth); // Apply authentication middleware to all routes
 
 // Optional: Add checkPermission('manage_permissions') if you want restriction
-router.get(
-  "/all",
-  controller.getAllPermissions
-);
+router.get("/all", controller.getAllPermissions);
 router.get(
   "/role-wise",
   checkPermission("view_permission"),
@@ -26,6 +23,11 @@ router.put(
   checkPermission("edit_permission"),
   activityLogger("role_permissions", () => null),
   controller.updateAllRolePermissions
+);
+router.post(
+  "/",
+  activityLogger("permission", (req, res) => res.locals.newRecordId),
+  controller.create
 );
 
 module.exports = router;

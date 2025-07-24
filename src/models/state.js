@@ -33,6 +33,14 @@ const state = {
       .where("states.id", id)
       .first(),
 
+  findByName: (name) =>
+    db("states")
+      .select("id", "name")
+      .whereRaw("LOWER(name) = LOWER(?)", [name.trim()])
+      .whereNull("deleted_at")
+      .where("is_active", true)
+      .first(),
+
   create: (data) => db("states").insert(data).returning("*"),
 
   update: (id, data) => db("states").where({ id }).update(data).returning("*"),

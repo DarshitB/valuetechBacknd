@@ -8,17 +8,21 @@ const checkPermission = require("../middleware/permission"); // Middleware to ch
 const beforeUpdateLogger = require("../middleware/beforeUpdateLogger"); // Middleware to store old data on local temporary for add activity log
 const activityLogger = require("../middleware/activityLogger"); // Middleware to log user activity
 
-router.use(auth); // Apply authentication middleware to all routes
+// Apply authentication middleware to all routes
+router.use(auth);
 
-// e.g. add middleware like auth or permission here if needed
+// GET all cities
 router.get("/", cityController.getAll);
+// GET bank by ID
 router.get("/:id", cityController.getById);
+// CREATE a city
 router.post(
   "/",
   checkPermission("add_cities"),
   activityLogger("cities", (req, res) => res.locals.newRecordId),
   cityController.create
 );
+// UPDATE a city by ID
 router.put(
   "/:id",
   checkPermission("edit_cities"),
@@ -26,6 +30,7 @@ router.put(
   activityLogger("cities", (req) => req.params.id),
   cityController.update
 );
+// SOFT DELETE a city
 router.delete(
   "/:id",
   checkPermission("delete_cities"),

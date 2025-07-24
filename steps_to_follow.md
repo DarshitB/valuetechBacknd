@@ -1,10 +1,10 @@
 # to create migration
-npx knex migrate:make 004_create_activity_log_schema
+npx knex migrate:make 00_create_bank_branch_schema
 
 # to run migration
-npx knex migrate:latest
+npx knex migrate:latest   # use package.json
 
-knex migrate:latest --env production
+knex migrate:latest --env production # use package.json
 
 # to rollback to all the migration
 npx knex migrate:rollback --all
@@ -16,9 +16,9 @@ npx knex migrate:down
 npx knex seed:make 002_seed_permissions
 
 # to run seed 
-npx knex seed:run
+npx knex seed:run # use package.json
 
-knex seed:run --env production
+knex seed:run --env production # use package.json
 
 # to remove all git branch from windows
 Remove-Item -Recurse -Force .git

@@ -32,6 +32,13 @@ exports.create = async (req, res, next) => {
     if (!name || !state_id)
       throw new BadRequestError("City name and state_id are required");
 
+    // Duplicate check: same name under same state
+    const existing = await City.findByNameAndState(name, state_id);
+    if (existing)
+      throw new ConflictError(
+        "City with the same name already exists in this state"
+      );
+
     const [city] = await City.create({
       name,
       state_id,

@@ -63,3 +63,331 @@
     at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:95:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2025-07-21 21:10:06 | INFO | Environment: production
+2025-07-23 20:54:00 | INFO | Environment: development
+2025-07-23 20:59:08 | INFO | Environment: development
+2025-07-23 21:06:12 | INFO | Environment: development
+2025-07-23 21:09:25 | INFO | Environment: development
+2025-07-23 21:12:50 | INFO | Environment: development
+2025-07-23 21:19:03 | INFO | Environment: development
+2025-07-23 21:19:10 | INFO | Environment: development
+2025-07-23 21:28:42 | INFO | Environment: development
+2025-07-23 21:33:28 | INFO | Environment: development
+2025-07-23 21:33:53 | INFO | Environment: development
+2025-07-23 22:59:20 | INFO | Environment: development
+2025-07-23 23:01:14 | INFO | Environment: development
+2025-07-23 23:01:23 | INFO | Environment: development
+2025-07-23 23:03:02 | INFO | Environment: development
+2025-07-23 23:15:19 | INFO | Environment: development
+2025-07-23 23:17:29 | INFO | Environment: development
+2025-07-23 23:17:40 | INFO | Environment: development
+2025-07-23 23:20:51 | INFO | Environment: development
+2025-07-23 23:21:05 | INFO | Environment: development
+2025-07-23 23:22:33 | INFO | Environment: development
+2025-07-23 23:25:14 | INFO | Environment: development
+2025-07-23 23:26:49 | INFO | Environment: development
+2025-07-23 23:26:54 | INFO | Environment: development
+2025-07-23 23:28:24 | INFO | Environment: development
+2025-07-23 23:28:39 | INFO | Environment: development
+2025-07-23 23:29:20 | INFO | Environment: development
+2025-07-23 23:29:40 | INFO | Environment: development
+2025-07-23 23:30:43 | INFO | Environment: development
+2025-07-23 23:31:16 | ERROR | Error: Bank not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:22:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-23 23:32:32 | ERROR | Error: Bank name and initial are required
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:33:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-23 23:32:47 | ERROR | Error: Bank name and initial are required
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:33:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-23 23:33:35 | INFO | Environment: development
+2025-07-23 23:34:22 | ERROR | TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:80:47
+    at Array.find (<anonymous>)
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:76:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-23 23:35:59 | ERROR | Error: Bank with same name or initial already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:83:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-23 23:37:33 | INFO | Environment: development
+2025-07-23 23:38:06 | INFO | Environment: development
+2025-07-23 23:38:58 | ERROR | Error: Bank not found
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:72:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-23 23:39:26 | INFO | Environment: development
+2025-07-23 23:41:09 | ERROR | error: insert into "cities" ("created_at", "created_by", "name", "state_id") values ($1, $2, $3, $4) returning * - insert or update on table "cities" violates foreign key constraint "cities_state_id_foreign"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-23 23:42:42 | INFO | Environment: development
+2025-07-23 23:44:59 | ERROR | Error: Bank branch not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:22:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-23 23:47:27 | INFO | Environment: development
+2025-07-23 23:48:11 | ERROR | SyntaxError: Expected double-quoted property name in JSON at position 35 (line 3 column 1)
+    at JSON.parse (<anonymous>)
+    at parse (D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\types\json.js:77:19)
+    at D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:238:16)
+    at done (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-07-23 23:49:28 | INFO | Environment: development
+2025-07-23 23:54:10 | INFO | Environment: development
+2025-07-23 23:54:14 | ERROR | Error: Provided bank_id does not exist
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:40:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-23 23:54:59 | ERROR | Error: Provided bank_id does not exist
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:91:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-23 23:55:25 | INFO | Environment: development
+2025-07-24 00:21:52 | INFO | Environment: development
+2025-07-24 00:24:31 | INFO | Environment: development
+2025-07-24 00:24:51 | INFO | Environment: development
+2025-07-24 00:25:09 | INFO | Environment: development
+2025-07-24 01:25:12 | ERROR | Error: Bank with same name or initial already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:43:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 06:12:36 | ERROR | Error: User not found
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:87:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 06:20:23 | INFO | Environment: development
+2025-07-24 06:43:26 | ERROR | Error: Bank with same name or initial already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:43:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 06:45:36 | INFO | Environment: development
+2025-07-24 06:45:39 | INFO | Environment: development
+2025-07-24 06:45:59 | INFO | Environment: development
+2025-07-24 06:46:44 | INFO | Environment: development
+2025-07-24 06:46:47 | INFO | Environment: development
+2025-07-24 06:46:53 | ERROR | Error: Name, bank_id and city_id are required
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:36:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-24 06:47:15 | ERROR | Error: Branch with same name already exists for this bank
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:54:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 06:48:37 | INFO | Environment: development
+2025-07-24 07:02:59 | ERROR | Error: Branch with same name already exists for this bank
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:54:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:08:00 | ERROR | Error: Branch with same name already exists for this bank
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:54:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:08:14 | ERROR | Error: Branch with same name already exists for this bank
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:54:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:09:15 | ERROR | Error: Bank with same name or initial already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:43:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:10:43 | ERROR | Error: Bank with same name or initial already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:43:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:10:47 | ERROR | Error: Bank with same name or initial already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:43:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:10:56 | ERROR | TypeError: Cannot destructure property 'name' of 'req.body' as it is undefined.
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:68:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\beforeUpdateLogger.js:25:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:11:03 | ERROR | TypeError: Cannot destructure property 'name' of 'req.body' as it is undefined.
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:68:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\beforeUpdateLogger.js:25:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:11:49 | ERROR | Error: Bank with same name or initial already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:83:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:11:56 | ERROR | Error: Bank with same name or initial already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:83:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:12:01 | ERROR | Error: Bank with same name or initial already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:83:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:13:53 | ERROR | Error: Branch with same name already exists for this bank
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:54:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:16:08 | ERROR | Error: Branch with same name already exists for this bank
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:54:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:18:36 | INFO | Environment: development
+2025-07-24 07:19:09 | INFO | Environment: development
+2025-07-24 07:19:55 | INFO | Environment: development
+2025-07-24 07:20:11 | ERROR | Error: Branch with same name already exists for this bank
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:60:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:20:30 | ERROR | Error: Branch with same name already exists for this bank
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:127:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:20:33 | ERROR | ReferenceError: branch is not defined
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:144:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:20:50 | ERROR | ReferenceError: branch is not defined
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:144:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:21:43 | INFO | Environment: development
+2025-07-24 07:21:45 | ERROR | ReferenceError: branch is not defined
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:144:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:23:17 | INFO | Environment: development
+2025-07-24 07:23:19 | INFO | Environment: development
+2025-07-24 07:24:18 | ERROR | Error: Bank with same name or initial already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:43:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:24:27 | ERROR | Error: Bank with same name or initial already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:83:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:24:31 | ERROR | Error: Bank with same name or initial already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:83:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:24:57 | ERROR | Error: Branch with same name already exists for this bank
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:60:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:31:51 | INFO | Environment: development
+2025-07-24 07:31:57 | ERROR | TypeError: State.findByName is not a function
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:34:34)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-24 07:32:09 | INFO | Environment: development
+2025-07-24 07:32:12 | ERROR | TypeError: State.findByName is not a function
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:34:34)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-24 07:33:05 | INFO | Environment: development
+2025-07-24 07:33:29 | INFO | Environment: development
+2025-07-24 07:33:36 | ERROR | Error: State name already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:35:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:34:07 | ERROR | Error: State name already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:35:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:35:37 | INFO | Environment: development
+2025-07-24 07:35:57 | ERROR | Error: State name already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:73:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:39:41 | ERROR | Error: State name already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:73:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:39:46 | ERROR | Error: State name already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:73:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:40:06 | INFO | Environment: development
+2025-07-24 07:43:14 | INFO | Environment: development
+2025-07-24 07:43:54 | INFO | Environment: development
+2025-07-24 07:43:58 | INFO | Environment: development
+2025-07-24 07:44:10 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:38:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:44:39 | ERROR | Error: State name already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:35:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:45:22 | INFO | Environment: development
+2025-07-24 07:45:25 | INFO | Environment: development
+2025-07-24 07:45:33 | ERROR | Error: State name already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:42:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:45:59 | INFO | Environment: development
+2025-07-24 07:47:29 | ERROR | Error: State name already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:73:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:47:56 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:38:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:49:56 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:38:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:53:28 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:38:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:53:37 | ERROR | Error: State name already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:35:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:53:49 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:38:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 07:54:21 | INFO | Environment: development
+2025-07-24 09:32:39 | ERROR | Error: Bank branch not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:25:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 09:32:39 | ERROR | Error: Bank branch not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:25:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 09:34:18 | ERROR | Error: Bank branch not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:25:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 09:34:18 | ERROR | Error: Bank branch not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\bankBranchController.js:25:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 09:42:13 | INFO | Environment: development
+2025-07-24 09:50:02 | ERROR | Error: Username already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\userController.js:92:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 09:55:51 | INFO | Environment: development
+2025-07-24 09:56:00 | ERROR | Error: Username already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\userController.js:92:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 10:02:11 | INFO | Environment: development
+2025-07-24 10:04:33 | INFO | Environment: development
+2025-07-24 10:08:38 | INFO | Environment: development
+2025-07-24 10:08:46 | INFO | Environment: development
+2025-07-24 10:10:37 | INFO | Environment: development
+2025-07-24 10:13:53 | ERROR | ReferenceError: ConflictError is not defined
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\permissionController.js:75:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-24 10:16:27 | INFO | Environment: development
+2025-07-24 10:24:36 | INFO | Environment: development
