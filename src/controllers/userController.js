@@ -29,7 +29,7 @@ exports.getById = async (req, res, next) => {
 
 exports.findByMobile = async (req, res) => {
   try {
-    const { mobile } = req.params;
+    const { mobile } = req.body;
 
     if (!mobile || mobile.trim() === "") {
       throw new BadRequestError("Mobile number is required.");
@@ -48,13 +48,34 @@ exports.findByMobile = async (req, res) => {
   }
 };
 
+exports.checkEmailExistence = async (req, res) => {
+  try {
+    const { email } = req.body;
+
+    if (!email || email.trim() === "") {
+      throw new BadRequestError("Email is required.");
+    }
+
+    const user = await User.findByEmail(email);
+
+    if (user) {
+      return res.status(200).json({ exists: true });
+    } else {
+      return res.status(200).json({ exists: false });
+    }
+  } catch (err) {
+    console.error("Error in findByEmail:", err);
+    return res.status(500).json({ message: "Server error." });
+  }
+};
+
 exports.create = async (req, res, next) => {
   try {
-    const { username, password, role_id, name, mobile, city_id } = req.body;
+    const { email, password, role_id, name, mobile, city_id } = req.body;
 
-    if (!username || !password || !role_id || !name) {
+    if (!email || !password || !role_id || !name) {
       throw new BadRequestError(
-        "Name, username, password, and role_id are required"
+        "Name, email, password, and role_id are required"
       );
     }
 
@@ -62,7 +83,7 @@ exports.create = async (req, res, next) => {
 
     const [user] = await User.create({
       name,
-      username,
+      email,
       mobile,
       password: hash,
       role_id,
@@ -89,7 +110,7 @@ exports.create = async (req, res, next) => {
     res.status(201).json(enrichedUser);
   } catch (err) {
     if (err.code === "23505") {
-      return next(new ConflictError("Username already exists"));
+      return next(new ConflictError("email already exists"));
     }
     next(err);
   }
@@ -98,14 +119,14 @@ exports.create = async (req, res, next) => {
 exports.update = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const { name, username, password, role_id, mobile, city_id } = req.body;
+    const { name, email, password, role_id, mobile, city_id } = req.body;
 
     const existing = await User.findById(id);
     if (!existing) throw new NotFoundError("User not found");
 
     const updatedData = {
       name,
-      username,
+      email,
       role_id,
       mobile,
       city_id,
@@ -138,7 +159,7 @@ exports.update = async (req, res, next) => {
     res.json(enrichedUsers);
   } catch (err) {
     if (err.code === "23505") {
-      return next(new ConflictError("Username already exists"));
+      return next(new ConflictError("email already exists"));
     }
     next(err);
   }

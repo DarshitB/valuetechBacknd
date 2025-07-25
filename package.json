@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon index.js",
-    "start": "NODE_ENV=production node index.js", 
+    "start": "cross-env NODE_ENV=production node index.js", 
     "migrate:dev": "knex migrate:latest --env development",
     "migrate:prod": "knex migrate:latest --env production",
     "seed:dev": "knex seed:run --env development",

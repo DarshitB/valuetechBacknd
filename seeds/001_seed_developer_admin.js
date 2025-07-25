@@ -12,7 +12,7 @@ exports.seed = async function (knex) {
 
   await knex("users").insert({
     name: "Owner",
-    username: process.env.DEFAULT_ADMIN_USERNAME,
+    email: process.env.DEFAULT_ADMIN_USERNAME,
     password: hash,
     role_id: adminRoleId,
   });

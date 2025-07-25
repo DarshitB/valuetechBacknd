@@ -272,3 +272,42 @@
 2025-07-24 10:13:53 | ERROR | ReferenceError: ConflictError is not defined
     at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\permissionController.js:75:23)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 10:32:44 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:38:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 10:37:24 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:39:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 10:37:34 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:39:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 10:42:29 | ERROR | Error: State not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:22:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 10:42:29 | ERROR | Error: State not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:22:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 10:42:42 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:39:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 10:45:28 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:39:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 10:46:29 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:39:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 12:52:19 | ERROR | Error: email already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\userController.js:113:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 12:55:47 | ERROR | Error: email already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\userController.js:113:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 12:56:57 | ERROR | Error: email already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\userController.js:162:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 13:06:46 | ERROR | Error: email already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\userController.js:162:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 13:07:02 | ERROR | Error: email already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\userController.js:162:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

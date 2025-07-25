@@ -18,7 +18,7 @@ exports.up = async function (knex) {
     table.increments("id").primary();
 
     table.string("name").notNullable();
-    table.string("username").notNullable().unique();
+    table.string("email").notNullable().unique();
     table.string("mobile", 15).nullable();
     table.string("password").notNullable();
 

@@ -29,6 +29,7 @@ exports.getById = async (req, res, next) => {
 exports.create = async (req, res, next) => {
   try {
     const { name, state_id } = req.body;
+    console.log("req.body", req.body);
     if (!name || !state_id)
       throw new BadRequestError("City name and state_id are required");
 

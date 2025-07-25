@@ -12,7 +12,7 @@ const user = {
       .select(
         "users.id",
         "users.name",
-        "users.username",
+        "users.email",
         "users.mobile",
         "users.role_id",
         "roles.name as role_name",
@@ -40,7 +40,7 @@ const user = {
       .select(
         "users.id",
         "users.name",
-        "users.username",
+        "users.email",
         "users.mobile",
         "users.role_id",
         "roles.name as role_name",
@@ -69,7 +69,7 @@ const user = {
       .select(
         "users.id",
         "users.name",
-        "users.username",
+        "users.email",
         "users.mobile",
         "users.role_id",
         "roles.name as role_name",
@@ -88,16 +88,23 @@ const user = {
       .whereNull("users.deleted_at")
       .first(), // find by mobile number to prevent duplicate mobile number
 
+  findByEmail: (email) =>
+    db("users")
+      .select("id", "name", "email")
+      .where("users.email", email)
+      .whereNull("deleted_at")
+      .first(), // find by Email to prevent duplicate Email to created user
+
   findByUsernameOrMobile: (input) =>
     db("users")
       .where(function () {
-        this.where("username", input).orWhere("mobile", input);
+        this.where("email", input).orWhere("mobile", input);
       })
       .whereNull("deleted_at")
       .first(),
 
-  findByUsername: (username) =>
-    db("users").where({ username }).whereNull("deleted_at").first(), // Find user by username that is not soft-deleted
+  findByUsername: (email) =>
+    db("users").where({ email }).whereNull("deleted_at").first(), // Find user by email that is not soft-deleted
 
   create: (data) => db("users").insert(data).returning("*"), // Create a new user
 

@@ -10,12 +10,12 @@ const { getDeviceDetails } = require("../utils/deviceData");
 
 /* exports.login = async (req, res, next) => {
   try {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
-    if (!username || !password)
-      throw new BadRequestError("Username and password are required");
+    if (!email || !password)
+      throw new BadRequestError("email and password are required");
 
-    const user = await User.findByUsername(username);
+    const user = await User.findByUsername(email);
     if (!user) throw new NotFoundError("User not found");
 
     const match = await bcrypt.compare(password, user.password);
@@ -57,7 +57,7 @@ const { getDeviceDetails } = require("../utils/deviceData");
     //  token,
     //  user: {
     //    id: user.id,
-    //    username: user.username,
+    //    email: user.email,
     //    role: {
     //      id: role.id,
     //      name: role.name,
@@ -74,15 +74,15 @@ const { getDeviceDetails } = require("../utils/deviceData");
 }; */
 exports.login = async (req, res, next) => {
   try {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
     // ✅ Validate required fields
-    if (!username || !password) {
+    if (!email || !password) {
       throw new BadRequestError("Username and password are required");
     }
 
-    // ✅ Find user by username
-    const user = await User.findByUsernameOrMobile(username);
+    // ✅ Find user by email
+    const user = await User.findByUsernameOrMobile(email);
     if (!user) {
       throw new NotFoundError("User not found");
     }
@@ -134,7 +134,7 @@ exports.login = async (req, res, next) => {
       token,
       user: {
         id: user.id,
-        username: user.username,
+        email: user.email,
         role: {
           id: role.id,
           name: role.name,
@@ -191,7 +191,7 @@ exports.getMe = async (req, res, next) => {
 
     res.json({
       id: user.id,
-      username: user.username,
+      email: user.email,
       name: user.name,
       mobile: user.mobile,
       city_id: user.city_id,

@@ -17,7 +17,7 @@ module.exports = async function (req, res, next) {
       id: user.id,
       role_id: user.role_id,
       role_name: user.role_name,
-      username: user.username,
+      email: user.email,
     }; // Attach user info to request
 
     next(); // Proceed to the next middleware or route handler

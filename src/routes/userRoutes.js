@@ -13,7 +13,8 @@ router.use(auth); // Apply authentication middleware to all routes
 
 router.get("/", userController.getAll);
 router.get("/:id", userController.getById);
-router.get("/mobile/:mobile", userController.findByMobile);
+router.post("/check-mobile", userController.findByMobile);
+router.post("/check-email", userController.checkEmailExistence);
 router.post(
   "/",
   checkPermission("add_user"),
