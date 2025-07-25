@@ -74,15 +74,15 @@ const { getDeviceDetails } = require("../utils/deviceData");
 }; */
 exports.login = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
-
+    const { username, password } = req.body;
+    /* console.log(req.body); */
     // ✅ Validate required fields
-    if (!email || !password) {
+    if (!username || !password) {
       throw new BadRequestError("Username and password are required");
     }
 
     // ✅ Find user by email
-    const user = await User.findByUsernameOrMobile(email);
+    const user = await User.findByEmailOrMobile(username);
     if (!user) {
       throw new NotFoundError("User not found");
     }

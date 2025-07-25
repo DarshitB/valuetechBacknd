@@ -95,7 +95,7 @@ const user = {
       .whereNull("deleted_at")
       .first(), // find by Email to prevent duplicate Email to created user
 
-  findByUsernameOrMobile: (input) =>
+  findByEmailOrMobile: (input) =>
     db("users")
       .where(function () {
         this.where("email", input).orWhere("mobile", input);

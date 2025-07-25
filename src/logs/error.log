@@ -311,3 +311,36 @@
 2025-07-25 13:07:02 | ERROR | Error: email already exists
     at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\userController.js:162:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-25 14:10:35 | ERROR | Error: Username and password are required
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:81:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at D:\React\valuetechsolutions\Backend\node_modules\router\index.js:295:15
+    at processParams (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:582:12)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:291:5)
+    at Function.handle (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:186:3)
+2025-07-25 14:11:04 | ERROR | Error: Username and password are required
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:81:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at D:\React\valuetechsolutions\Backend\node_modules\router\index.js:295:15
+    at processParams (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:582:12)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:291:5)
+    at Function.handle (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:186:3)
+2025-07-25 14:12:42 | ERROR | TypeError: User.findByEmailOrMobile is not a function
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:85:29)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at D:\React\valuetechsolutions\Backend\node_modules\router\index.js:295:15
+    at processParams (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:582:12)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:291:5)
+    at Function.handle (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:186:3)
