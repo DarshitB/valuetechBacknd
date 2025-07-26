@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const subcategoryController = require("../controllers/subcategoryController");
+const subcategoryController = require("../controllers/subCategoryController");
 
 const auth = require("../middleware/auth"); // Middleware to check authentication
 const checkPermission = require("../middleware/permission"); // Middleware to check user permissions
