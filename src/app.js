@@ -12,6 +12,9 @@ const stateRoutes = require("./routes/stateRoutes");
 const cityRoutes = require("./routes/cityRoutes");
 const bankRoutes = require("./routes/bankRoutes");
 const bankBranchRoutes = require("./routes/bankBranchRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
+const subcategoryRoutes = require("./routes/subcategoryRoutes");
+const childCategoryRoutes = require("./routes/childCategoryRoutes");
 
 const app = express();
 
@@ -49,6 +52,9 @@ app.use("/api/states", stateRoutes);
 app.use("/api/cities", cityRoutes);
 app.use("/api/bank", bankRoutes);
 app.use("/api/bank-branch", bankBranchRoutes);
+app.use("/api/categories", categoryRoutes);
+app.use("/api/subcategories", subcategoryRoutes);
+app.use("/api/child-categories", childCategoryRoutes);
 
 app.use(errorHandler); // Error handling middleware
 

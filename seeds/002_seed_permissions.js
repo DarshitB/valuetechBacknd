@@ -35,6 +35,19 @@ exports.seed = async function (knex) {
     "add_branch_officer",
     "edit_branch_officer",
     "delete_branch_officer",
+
+    "view_category",
+    "add_category",
+    "edit_category",
+    "delete_category",
+    "view_sub_category",
+    "add_sub_category",
+    "edit_sub_category",
+    "delete_sub_category",
+    "view_child_category",
+    "add_child_category",
+    "edit_child_category",
+    "delete_child_category",
   ];
 
   // Insert permissions

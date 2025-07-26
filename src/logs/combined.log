@@ -494,3 +494,202 @@
     at next (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:291:5)
     at Function.handle (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:186:3)
 2025-07-25 14:12:56 | INFO | Environment: development
+2025-07-26 13:40:23 | INFO | Environment: development
+2025-07-26 13:52:50 | INFO | Environment: development
+2025-07-26 14:05:55 | INFO | Environment: development
+2025-07-26 15:29:25 | INFO | Environment: development
+2025-07-26 15:31:06 | INFO | Environment: development
+2025-07-26 16:00:12 | INFO | Environment: development
+2025-07-26 16:00:16 | INFO | Environment: development
+2025-07-26 16:00:41 | INFO | Environment: development
+2025-07-26 16:00:58 | INFO | Environment: development
+2025-07-26 16:01:11 | INFO | Environment: development
+2025-07-26 16:01:14 | INFO | Environment: development
+2025-07-26 16:02:42 | INFO | Environment: development
+2025-07-26 16:04:34 | INFO | Environment: development
+2025-07-26 16:04:49 | INFO | Environment: development
+2025-07-26 16:05:07 | INFO | Environment: development
+2025-07-26 16:07:41 | INFO | Environment: development
+2025-07-26 16:08:12 | INFO | Environment: development
+2025-07-26 16:10:05 | INFO | Environment: development
+2025-07-26 16:10:07 | INFO | Environment: development
+2025-07-26 16:10:28 | INFO | Environment: development
+2025-07-26 16:10:31 | INFO | Environment: development
+2025-07-26 16:10:38 | INFO | Environment: development
+2025-07-26 16:10:41 | INFO | Environment: development
+2025-07-26 16:12:21 | INFO | Environment: development
+2025-07-26 16:18:11 | INFO | Environment: development
+2025-07-26 16:18:37 | INFO | Environment: development
+2025-07-26 16:21:34 | INFO | Environment: development
+2025-07-26 16:25:12 | ERROR | error: select "category"."id", "category"."name", "category"."is_active", "category"."created_at", "created_user"."name" as "created_by", "category"."updated_at", "updated_user"."name" as "updated_by" from "category" left join "users" as "created_user" on "category"."created_by" = "created_user"."id" left join "users" as "updated_user" on "category"."updated_by" = "updated_user"."id" where "category"."deleted_at" is null and "category"."is_active" = $1 - relation "category" does not exist
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-26 16:26:33 | INFO | Environment: development
+2025-07-26 16:30:18 | INFO | Environment: development
+2025-07-26 16:30:51 | INFO | Environment: development
+2025-07-26 16:31:18 | INFO | Environment: development
+2025-07-26 16:31:46 | INFO | Environment: development
+2025-07-26 16:34:42 | INFO | Environment: development
+2025-07-26 16:35:37 | INFO | Environment: development
+2025-07-26 16:36:53 | INFO | Environment: development
+2025-07-26 16:37:24 | INFO | Environment: development
+2025-07-26 16:37:33 | INFO | Environment: development
+2025-07-26 16:42:05 | INFO | Environment: development
+2025-07-26 16:42:32 | INFO | Environment: development
+2025-07-26 16:43:26 | INFO | Environment: development
+2025-07-26 16:44:21 | ERROR | Error: SubCategory not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\subcategoryController.js:24:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 16:44:34 | ERROR | Error: Category with the same name already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\categoryController.js:39:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 16:45:24 | ERROR | Error: Name and category_id are required
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\subcategoryController.js:36:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-26 16:45:38 | INFO | Environment: development
+2025-07-26 16:46:46 | ERROR | Error: SubCategory with the same name already exists in this category
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\subcategoryController.js:40:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 16:48:12 | INFO | Environment: development
+2025-07-26 16:48:49 | INFO | Environment: development
+2025-07-26 16:49:08 | INFO | Environment: development
+2025-07-26 16:49:23 | INFO | Environment: development
+2025-07-26 16:49:39 | INFO | Environment: development
+2025-07-26 16:51:12 | ERROR | Error: ChildCategory not found
+    at exports.getById (D:\React\valuetechsolutions\Backend\src\controllers\childCategoryController.js:24:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 16:51:39 | ERROR | Error: Name and category_id are required
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\subcategoryController.js:36:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-26 16:51:53 | ERROR | Error: Name and sub_category_id are required
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\childCategoryController.js:36:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-26 16:52:50 | INFO | Environment: development
+2025-07-26 16:57:55 | INFO | Environment: development
+2025-07-26 17:43:32 | ERROR | Error: Category with the same name already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\categoryController.js:39:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 17:44:13 | INFO | Environment: development
+2025-07-26 18:03:08 | INFO | Environment: development
+2025-07-26 18:05:00 | INFO | Environment: development
+2025-07-26 18:05:23 | INFO | Environment: development
+2025-07-26 18:05:26 | INFO | Environment: development
+2025-07-26 18:06:30 | INFO | Environment: development
+2025-07-26 18:07:12 | INFO | Environment: development
+2025-07-26 18:07:24 | INFO | Environment: development
+2025-07-26 18:07:37 | INFO | Environment: development
+2025-07-26 18:11:43 | INFO | Environment: development
+2025-07-26 18:12:30 | INFO | Environment: development
+2025-07-26 18:13:14 | INFO | Environment: development
+2025-07-26 18:13:16 | INFO | Environment: development
+2025-07-26 18:13:39 | INFO | Environment: development
+2025-07-26 18:14:01 | ERROR | Error: Category with the same name already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\categoryController.js:73:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 18:38:25 | INFO | Environment: development
+2025-07-26 18:39:00 | INFO | Environment: development
+2025-07-26 18:40:15 | INFO | Environment: development
+2025-07-26 18:40:17 | ERROR | Error: SubCategory with the same name already exists in this category
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\subcategoryController.js:72:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 18:40:32 | ERROR | Error: SubCategory with the same name already exists in this category
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\subcategoryController.js:40:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 18:40:51 | INFO | Environment: development
+2025-07-26 18:41:02 | INFO | Environment: development
+2025-07-26 18:41:44 | INFO | Environment: development
+2025-07-26 19:09:37 | ERROR | Error: Name and sub_category_id are required
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\childCategoryController.js:36:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-26 19:11:45 | ERROR | Error: Name and sub_category_id are required
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\childCategoryController.js:36:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-26 19:39:18 | ERROR | Error: ChildCategory with the same name already exists in this sub-category
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\childCategoryController.js:80:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 19:47:59 | ERROR | Error: SubCategory with the same name already exists in this category
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\subcategoryController.js:77:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 19:50:03 | INFO | Environment: development
+2025-07-26 19:50:39 | ERROR | Error: ChildCategory with the same name already exists in this sub-category
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\childCategoryController.js:80:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 19:51:47 | ERROR | Error: State name already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:35:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 19:52:43 | ERROR | Error: State name already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\stateController.js:73:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 20:02:48 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:39:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 20:04:25 | INFO | Environment: development
+2025-07-26 20:04:30 | ERROR | Error: City with the same name already exists in this state
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:79:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 20:06:08 | ERROR | Error: City with the same name already exists in this state
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:79:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 20:12:12 | ERROR | Error: User not found
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:87:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 20:12:16 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-07-26 20:14:06 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-07-26 20:14:12 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-07-26 20:14:44 | INFO | Environment: development
+2025-07-26 20:19:35 | ERROR | Error: Bank with same name or initial already exists
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\bankController.js:83:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 21:17:23 | ERROR | Error: City with the same name already exists in this state
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:39:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

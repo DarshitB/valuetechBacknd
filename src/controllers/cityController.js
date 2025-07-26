@@ -29,7 +29,7 @@ exports.getById = async (req, res, next) => {
 exports.create = async (req, res, next) => {
   try {
     const { name, state_id } = req.body;
-    console.log("req.body", req.body);
+    
     if (!name || !state_id)
       throw new BadRequestError("City name and state_id are required");
 
@@ -73,6 +73,12 @@ exports.update = async (req, res, next) => {
 
     const existing = await City.findById(id);
     if (!existing) throw new NotFoundError("City not found");
+
+    const duplicate = await City.findByNameAndState(name, state_id);
+    if (duplicate && duplicate.id !== Number(id))
+      throw new ConflictError(
+        "City with the same name already exists in this state"
+      );
 
     const [updated] = await City.update(id, {
       name,

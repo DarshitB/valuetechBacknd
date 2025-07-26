@@ -1,5 +1,5 @@
 # to create migration
-npx knex migrate:make 00_create_bank_branch_schema
+npx knex migrate:make 006_create_category_sub_child_schema
 
 # to run migration
 npx knex migrate:latest   # use package.json
