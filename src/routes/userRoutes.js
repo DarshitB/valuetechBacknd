@@ -17,23 +17,23 @@ router.post("/check-mobile", userController.findByMobile);
 router.post("/check-email", userController.checkEmailExistence);
 router.post(
   "/",
-  checkPermission("add_user"),
-  activityLogger("users", (req, res) => res.locals.newRecordId),
+  checkPermission("add_user"), // Check if user has permission to add user
+  activityLogger("users", (req, res) => res.locals.newRecordId),// Log creation activity
   userController.create
 );
 router.put(
   "/:id",
   protectIfProtectedRole,
-  checkPermission("edit_user"),
-  beforeUpdateLogger("users", (req) => req.params.id),
-  activityLogger("users", (req) => req.params.id),
+  checkPermission("edit_user"), // Check if user has permission to edit user
+  beforeUpdateLogger("users", (req) => req.params.id), // Store previous state before update
+  activityLogger("users", (req) => req.params.id), // Log update activity
   userController.update
 );
 router.delete(
   "/:id",
   protectIfProtectedRole,
-  checkPermission("delete_user"),
-  activityLogger("users", (req) => req.params.id),
+  checkPermission("delete_user"), // Check if user has permission to delete user
+  activityLogger("users", (req) => req.params.id), // Log deletion activity
   userController.softDelete
 );
 

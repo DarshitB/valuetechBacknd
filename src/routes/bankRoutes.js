@@ -11,21 +11,14 @@ const activityLogger = require("../middleware/activityLogger"); // Logs user act
 // Apply auth middleware to all bank routes
 router.use(auth);
 
-// GET all active banks
 router.get("/", bankController.getAll);
-
-// GET bank by ID
 router.get("/:id", bankController.getById);
-
-// CREATE a new bank
 router.post(
   "/",
   checkPermission("add_bank"), // Checks if user has 'add_banks' permission
   activityLogger("bank", (req, res) => res.locals.newRecordId), // Log creation activity
   bankController.create
 );
-
-// UPDATE a bank by ID
 router.put(
   "/:id",
   checkPermission("edit_bank"), // Checks if user has 'edit_banks' permission
@@ -33,8 +26,6 @@ router.put(
   activityLogger("bank", (req) => req.params.id), // Log update activity
   bankController.update
 );
-
-// SOFT DELETE a bank
 router.delete(
   "/:id",
   checkPermission("delete_bank"), // Checks if user has 'delete_banks' permission

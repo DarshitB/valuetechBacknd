@@ -28,6 +28,7 @@ const user = {
         "states.name as state_name"
       )
       .whereNull("users.deleted_at")
+      .whereNotIn("roles.name", ["Bank Authority", "Bank Officer"])
       .where("roles.name", "!=", PROTECTED_ROLE), // Get all users excluding protected roles and soft-deleted ones
 
   findById: (id) =>
@@ -99,6 +100,14 @@ const user = {
     db("users")
       .where(function () {
         this.where("email", input).orWhere("mobile", input);
+      })
+      .whereNull("deleted_at")
+      .first(),
+
+  findByEmailAndMobile: (email, mobile) =>
+    db("users")
+      .where(function () {
+        this.where("email", email).orWhere("mobile", mobile);
       })
       .whereNull("deleted_at")
       .first(),

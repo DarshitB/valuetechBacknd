@@ -693,3 +693,300 @@
 2025-07-26 21:17:23 | ERROR | Error: City with the same name already exists in this state
     at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\cityController.js:39:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 14:56:44 | INFO | Environment: development
+2025-07-29 15:04:21 | ERROR | ReferenceError: knex is not defined
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:38:15)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-29 15:08:20 | INFO | Environment: development
+2025-07-29 15:08:24 | ERROR | ReferenceError: knex is not defined
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:38:15)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-29 15:12:29 | INFO | Environment: development
+2025-07-29 15:12:36 | ERROR | TypeError: knex.transaction is not a function
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:39:26)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-07-29 15:16:35 | INFO | Environment: development
+2025-07-29 15:16:40 | INFO | Environment: development
+2025-07-29 15:18:36 | INFO | Environment: development
+2025-07-29 15:22:45 | INFO | Environment: development
+2025-07-29 15:27:38 | INFO | Environment: development
+2025-07-29 15:28:21 | INFO | Environment: development
+2025-07-29 15:31:43 | ERROR | SyntaxError: Expected double-quoted property name in JSON at position 31 (line 3 column 1)
+    at JSON.parse (<anonymous>)
+    at parse (D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\types\json.js:77:19)
+    at D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:238:16)
+    at done (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-07-29 15:32:10 | INFO | Environment: development
+2025-07-29 15:34:23 | INFO | Environment: development
+2025-07-29 15:39:34 | INFO | Environment: development
+2025-07-29 15:40:45 | INFO | Environment: development
+2025-07-29 15:40:55 | INFO | Environment: development
+2025-07-29 15:44:20 | INFO | Environment: development
+2025-07-29 15:45:11 | INFO | Environment: development
+2025-07-29 15:45:13 | ERROR | Error: Name, email, contact number, role_id, department, and branch_id are required.
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:178:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 15:46:19 | INFO | Environment: development
+2025-07-29 15:46:30 | ERROR | error: select "categories"."id", "categories"."name" from "officer_categories" left join "categories" on "officer_categories"."category_id" = "categories"."id" where "officer_categories"."officer_id" = $1 and "officer_categories"."deleted_at" is null - relation "categories" does not exist
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-29 15:46:56 | ERROR | error: select "categories"."id", "categories"."name" from "officer_categories" left join "categories" on "officer_categories"."category_id" = "categories"."id" where "officer_categories"."officer_id" = $1 and "officer_categories"."deleted_at" is null - relation "categories" does not exist
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-29 15:47:00 | INFO | Environment: development
+2025-07-29 15:47:03 | ERROR | error: select "categories"."id", "categories"."name" from "officer_categories" left join "categories" on "officer_categories"."category_id" = "categories"."id" where "officer_categories"."officer_id" = $1 and "officer_categories"."deleted_at" is null - relation "categories" does not exist
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-29 15:49:04 | INFO | Environment: development
+2025-07-29 15:49:33 | INFO | Environment: development
+2025-07-29 15:49:41 | ERROR | Error: Undefined binding(s) detected when compiling WHERE. Undefined column(s): [email, mobile] query: where "email" = ? or "mobile" = ?
+    at QueryCompiler_PG.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:112:13)
+    at compileCallback (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\formatter\formatterUtils.js:13:19)
+    at rawOrFn (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\formatter\wrappingFormatter.js:225:7)
+    at QueryCompiler_PG.whereWrapped (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:1095:17)
+    at QueryCompiler_PG.where (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:584:34)
+    at D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:135:40
+    at Array.forEach (<anonymous>)
+    at QueryCompiler_PG.select (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:134:16)
+    at QueryCompiler_PG.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:75:29)
+    at QueryBuilder_PostgreSQL.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querybuilder.js:84:44)
+2025-07-29 15:54:14 | INFO | Environment: development
+2025-07-29 15:56:52 | INFO | Environment: development
+2025-07-29 15:56:54 | INFO | Environment: development
+2025-07-29 15:59:35 | INFO | Environment: development
+2025-07-29 16:01:30 | INFO | Environment: development
+2025-07-29 16:01:51 | ERROR | TypeError: (intermediate value) is not iterable
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:217:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 16:03:50 | INFO | Environment: development
+2025-07-29 16:03:59 | INFO | Environment: development
+2025-07-29 16:04:02 | ERROR | Error: The query is empty
+    at Client_PG._query (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\dialects\postgres\index.js:217:25)
+    at executeQuery (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\internal\query-executioner.js:37:17)
+    at Client_PG.query (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\client.js:154:12)
+    at D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\transaction.js:375:24
+    at new Promise (<anonymous>)
+    at trxClient.query (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\transaction.js:370:12)
+    at Runner.query (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:141:36)
+    at ensureConnectionCallback (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\internal\ensure-connection-callback.js:13:17)
+    at Runner.ensureConnection (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:318:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 16:06:41 | INFO | Environment: development
+2025-07-29 16:07:11 | INFO | Environment: development
+2025-07-29 16:09:59 | INFO | Environment: development
+2025-07-29 16:11:43 | INFO | Environment: development
+2025-07-29 16:18:45 | INFO | Environment: development
+2025-07-29 16:18:54 | ERROR | error: select "users"."id", "users"."name", "users"."email", "users"."mobile", "users"."role_id", "roles"."name" as "role_name", "users"."city_id", "cities"."name" as "city_name", "users"."otp", "users"."otp_expiry", "users"."created_at", "created_user"."name" as "created_by", "users"."updated_at", "updated_user"."name" as "updated_by", "cities"."state_id" as "state_id", "states"."name" as "state_name" from "users" left join "roles" on "users"."role_id" = "roles"."id" left join "cities" on "users"."city_id" = "cities"."id" left join "states" on "cities"."state_id" = "states"."id" left join "users" as "created_user" on "users"."created_by" = "created_user"."id" left join "users" as "updated_user" on "users"."updated_by" = "updated_user"."id" where "users"."id" = $1 and "users"."deleted_at" is null limit $2 - invalid input syntax for type integer: "Owner"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-29 16:19:10 | ERROR | error: select "users"."id", "users"."name", "users"."email", "users"."mobile", "users"."role_id", "roles"."name" as "role_name", "users"."city_id", "cities"."name" as "city_name", "users"."otp", "users"."otp_expiry", "users"."created_at", "created_user"."name" as "created_by", "users"."updated_at", "updated_user"."name" as "updated_by", "cities"."state_id" as "state_id", "states"."name" as "state_name" from "users" left join "roles" on "users"."role_id" = "roles"."id" left join "cities" on "users"."city_id" = "cities"."id" left join "states" on "cities"."state_id" = "states"."id" left join "users" as "created_user" on "users"."created_by" = "created_user"."id" left join "users" as "updated_user" on "users"."updated_by" = "updated_user"."id" where "users"."id" = $1 and "users"."deleted_at" is null limit $2 - invalid input syntax for type integer: "Owner"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-29 16:19:28 | INFO | Environment: development
+2025-07-29 16:19:34 | ERROR | error: select "users"."id", "users"."name", "users"."email", "users"."mobile", "users"."role_id", "roles"."name" as "role_name", "users"."city_id", "cities"."name" as "city_name", "users"."otp", "users"."otp_expiry", "users"."created_at", "created_user"."name" as "created_by", "users"."updated_at", "updated_user"."name" as "updated_by", "cities"."state_id" as "state_id", "states"."name" as "state_name" from "users" left join "roles" on "users"."role_id" = "roles"."id" left join "cities" on "users"."city_id" = "cities"."id" left join "states" on "cities"."state_id" = "states"."id" left join "users" as "created_user" on "users"."created_by" = "created_user"."id" left join "users" as "updated_user" on "users"."updated_by" = "updated_user"."id" where "users"."id" = $1 and "users"."deleted_at" is null limit $2 - invalid input syntax for type integer: "Owner"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-29 16:21:35 | INFO | Environment: development
+2025-07-29 16:21:57 | INFO | Environment: development
+2025-07-29 16:22:03 | ERROR | error: select "users"."id", "users"."name", "users"."email", "users"."mobile", "users"."role_id", "roles"."name" as "role_name", "users"."city_id", "cities"."name" as "city_name", "users"."otp", "users"."otp_expiry", "users"."created_at", "created_user"."name" as "created_by", "users"."updated_at", "updated_user"."name" as "updated_by", "cities"."state_id" as "state_id", "states"."name" as "state_name" from "users" left join "roles" on "users"."role_id" = "roles"."id" left join "cities" on "users"."city_id" = "cities"."id" left join "states" on "cities"."state_id" = "states"."id" left join "users" as "created_user" on "users"."created_by" = "created_user"."id" left join "users" as "updated_user" on "users"."updated_by" = "updated_user"."id" where "users"."id" = $1 and "users"."deleted_at" is null limit $2 - invalid input syntax for type integer: "Owner"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-29 16:24:29 | INFO | Environment: development
+2025-07-29 16:24:41 | INFO | Environment: development
+2025-07-29 16:24:47 | ERROR | error: select "users"."id", "users"."name", "users"."email", "users"."mobile", "users"."role_id", "roles"."name" as "role_name", "users"."city_id", "cities"."name" as "city_name", "users"."otp", "users"."otp_expiry", "users"."created_at", "created_user"."name" as "created_by", "users"."updated_at", "updated_user"."name" as "updated_by", "cities"."state_id" as "state_id", "states"."name" as "state_name" from "users" left join "roles" on "users"."role_id" = "roles"."id" left join "cities" on "users"."city_id" = "cities"."id" left join "states" on "cities"."state_id" = "states"."id" left join "users" as "created_user" on "users"."created_by" = "created_user"."id" left join "users" as "updated_user" on "users"."updated_by" = "updated_user"."id" where "users"."id" = $1 and "users"."deleted_at" is null limit $2 - invalid input syntax for type integer: "Owner"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-29 16:25:02 | INFO | Environment: development
+2025-07-29 16:25:49 | INFO | Environment: development
+2025-07-29 16:25:53 | ERROR | error: select "users"."id", "users"."name", "users"."email", "users"."mobile", "users"."role_id", "roles"."name" as "role_name", "users"."city_id", "cities"."name" as "city_name", "users"."otp", "users"."otp_expiry", "users"."created_at", "created_user"."name" as "created_by", "users"."updated_at", "updated_user"."name" as "updated_by", "cities"."state_id" as "state_id", "states"."name" as "state_name" from "users" left join "roles" on "users"."role_id" = "roles"."id" left join "cities" on "users"."city_id" = "cities"."id" left join "states" on "cities"."state_id" = "states"."id" left join "users" as "created_user" on "users"."created_by" = "created_user"."id" left join "users" as "updated_user" on "users"."updated_by" = "updated_user"."id" where "users"."id" = $1 and "users"."deleted_at" is null limit $2 - invalid input syntax for type integer: "Owner"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-07-29 16:28:39 | INFO | Environment: development
+2025-07-29 16:28:45 | ERROR | Error: Undefined binding(s) detected when compiling FIRST. Undefined column(s): [users.id] query: select "users"."id", "users"."name", "users"."email", "users"."mobile", "users"."role_id", "roles"."name" as "role_name", "users"."city_id", "cities"."name" as "city_name", "users"."otp", "users"."otp_expiry", "users"."created_at", "created_user"."name" as "created_by", "users"."updated_at", "updated_user"."name" as "updated_by", "cities"."state_id" as "state_id", "states"."name" as "state_name" from "users" left join "roles" on "users"."role_id" = "roles"."id" left join "cities" on "users"."city_id" = "cities"."id" left join "states" on "cities"."state_id" = "states"."id" left join "users" as "created_user" on "users"."created_by" = "created_user"."id" left join "users" as "updated_user" on "users"."updated_by" = "updated_user"."id" where "users"."id" = ? and "users"."deleted_at" is null limit ?
+    at QueryCompiler_PG.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:112:13)
+    at QueryBuilder_PostgreSQL.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querybuilder.js:84:44)
+    at ensureConnectionCallback (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\internal\ensure-connection-callback.js:4:30)
+    at Runner.ensureConnection (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:318:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Runner.run (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:30:19)
+    at async exports.update (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:254:21)
+2025-07-29 16:41:05 | INFO | Environment: development
+2025-07-29 16:45:15 | INFO | Environment: development
+2025-07-29 16:45:27 | ERROR | Error: The query is empty
+    at Client_PG._query (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\dialects\postgres\index.js:217:25)
+    at executeQuery (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\internal\query-executioner.js:37:17)
+    at Client_PG.query (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\client.js:154:12)
+    at D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\transaction.js:375:24
+    at new Promise (<anonymous>)
+    at trxClient.query (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\transaction.js:370:12)
+    at Runner.query (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:141:36)
+    at ensureConnectionCallback (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\internal\ensure-connection-callback.js:13:17)
+    at Runner.ensureConnection (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:318:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 16:46:17 | INFO | Environment: development
+2025-07-29 16:48:04 | INFO | Environment: development
+2025-07-29 16:50:07 | INFO | Environment: development
+2025-07-29 16:50:15 | ERROR | Error: Undefined binding(s) detected when compiling FIRST. Undefined column(s): [roles.id] query: select "roles"."id", "roles"."name", "roles"."created_at", "created_user"."name" as "created_by", "roles"."updated_at", "updated_user"."name" as "updated_by" from "roles" left join "users" as "created_user" on "roles"."created_by" = "created_user"."id" left join "users" as "updated_user" on "roles"."updated_by" = "updated_user"."id" where "roles"."id" = ? and "roles"."deleted_at" is null limit ?
+    at QueryCompiler_PG.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:112:13)
+    at QueryBuilder_PostgreSQL.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querybuilder.js:84:44)
+    at ensureConnectionCallback (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\internal\ensure-connection-callback.js:4:30)
+    at Runner.ensureConnection (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:318:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Runner.run (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:30:19)
+    at async exports.update (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:244:18)
+2025-07-29 16:52:17 | INFO | Environment: development
+2025-07-29 16:52:24 | ERROR | Error: Undefined binding(s) detected when compiling FIRST. Undefined column(s): [roles.id] query: select "roles"."id", "roles"."name", "roles"."created_at", "created_user"."name" as "created_by", "roles"."updated_at", "updated_user"."name" as "updated_by" from "roles" left join "users" as "created_user" on "roles"."created_by" = "created_user"."id" left join "users" as "updated_user" on "roles"."updated_by" = "updated_user"."id" where "roles"."id" = ? and "roles"."deleted_at" is null limit ?
+    at QueryCompiler_PG.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:112:13)
+    at QueryBuilder_PostgreSQL.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querybuilder.js:84:44)
+    at ensureConnectionCallback (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\internal\ensure-connection-callback.js:4:30)
+    at Runner.ensureConnection (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:318:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Runner.run (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:30:19)
+    at async exports.update (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:245:18)
+2025-07-29 16:53:00 | INFO | Environment: development
+2025-07-29 16:53:41 | INFO | Environment: development
+2025-07-29 17:01:09 | INFO | Environment: development
+2025-07-29 17:01:16 | INFO | Environment: development
+2025-07-29 17:01:23 | INFO | Environment: development
+2025-07-29 17:01:30 | INFO | Environment: development
+2025-07-29 17:01:35 | INFO | Environment: development
+2025-07-29 17:01:39 | INFO | Environment: development
+2025-07-29 17:09:02 | INFO | Environment: development
+2025-07-29 17:11:18 | INFO | Environment: development
+2025-07-29 17:58:19 | ERROR | Error: Email or mobile already exists.
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:68:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:10:55 | INFO | Environment: development
+2025-07-29 18:13:08 | INFO | Environment: development
+2025-07-29 18:13:15 | INFO | Environment: development
+2025-07-29 18:14:59 | INFO | Environment: development
+2025-07-29 18:15:39 | INFO | Environment: development
+2025-07-29 18:18:16 | INFO | Environment: development
+2025-07-29 18:18:51 | INFO | Environment: development
+2025-07-29 18:19:23 | INFO | Environment: development
+2025-07-29 18:19:43 | INFO | Environment: development
+2025-07-29 18:23:36 | INFO | Environment: development
+2025-07-29 18:24:00 | INFO | Environment: development
+2025-07-29 18:30:15 | INFO | Environment: development
+2025-07-29 18:30:39 | ERROR | TypeError: Cannot read properties of undefined (reading 'name')
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:256:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:31:20 | INFO | Environment: development
+2025-07-29 18:31:43 | ERROR | TypeError: Cannot read properties of undefined (reading 'name')
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:257:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:31:52 | INFO | Environment: development
+2025-07-29 18:31:54 | INFO | Environment: development
+2025-07-29 18:33:11 | INFO | Environment: development
+2025-07-29 18:34:02 | INFO | Environment: development
+2025-07-29 18:35:27 | ERROR | Error: Email already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:149:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:41:00 | ERROR | Error: Email already exists
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\officerController.js:149:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:44:11 | INFO | Environment: development
+2025-07-29 18:48:02 | INFO | Environment: development
+2025-07-29 18:48:32 | INFO | Environment: development
+2025-07-29 18:49:12 | INFO | Environment: development
+2025-07-29 18:49:48 | INFO | Environment: development
+2025-07-29 18:52:20 | INFO | Environment: development
+2025-07-29 18:52:42 | INFO | Environment: development
+2025-07-29 18:52:43 | INFO | Environment: development
+2025-07-29 18:53:01 | INFO | Environment: development
+2025-07-29 18:53:12 | INFO | Environment: development
+2025-07-29 18:53:16 | INFO | Environment: development
+2025-07-29 18:59:54 | INFO | Environment: development

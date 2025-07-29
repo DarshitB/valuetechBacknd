@@ -15,6 +15,7 @@ const bankBranchRoutes = require("./routes/bankBranchRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
 const subcategoryRoutes = require("./routes/subcategoryRoutes");
 const childCategoryRoutes = require("./routes/childCategoryRoutes");
+const officerRouter = require("./routes/officerRouter");
 
 const app = express();
 
@@ -55,6 +56,7 @@ app.use("/api/bank-branch", bankBranchRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/subcategories", subcategoryRoutes);
 app.use("/api/child-categories", childCategoryRoutes);
+app.use("/api/officers", officerRouter);
 
 app.use(errorHandler); // Error handling middleware
 

@@ -63,7 +63,7 @@ exports.update = async (req, res, next) => {
     const { id } = req.params;
     const { name } = req.body;
 
-    console.log("id", id);
+    /* console.log("id", id); */
     const existing = await Category.findById(id);
     if (!existing) throw new NotFoundError("Category not found");
 

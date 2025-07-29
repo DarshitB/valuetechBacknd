@@ -37,6 +37,24 @@ const category = {
       .where("category.is_active", true)
       .first(),
 
+    // Fetch multiple categories by array of IDs
+    findManyByIds: (ids) =>
+      db("category")
+        .leftJoin("users as created_user", "category.created_by", "created_user.id")
+        .leftJoin("users as updated_user", "category.updated_by", "updated_user.id")
+        .select(
+          "category.id",
+          "category.name",
+          "category.is_active",
+          "category.created_at",
+          "created_user.name as created_by",
+          "category.updated_at",
+          "updated_user.name as updated_by"
+        )
+        .whereIn("category.id", ids)
+        .whereNull("category.deleted_at")
+        .where("category.is_active", true),
+    
   // Insert new category
   create: (data) => db("category").insert(data).returning("*"),
 

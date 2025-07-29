@@ -1,5 +1,5 @@
 # to create migration
-npx knex migrate:make 006_create_category_sub_child_schema
+npx knex migrate:make 007_create_officer_and_officer_category_schema
 
 # to run migration
 npx knex migrate:latest   # use package.json

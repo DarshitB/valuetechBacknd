@@ -76,7 +76,7 @@ exports.create = async (req, res, next) => {
     // Now fetch the user name using the created_by id
     const branchCity = await City.findById(branch.city_id);
 
-    console.log(branchCity);
+    /* console.log(branchCity); */
     res.status(201).json({
       ...branch,
       city_name: branchCity.name,
@@ -91,7 +91,7 @@ exports.update = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { name, bank_id, city_id } = req.body;
-    console.log("payload", req.body);
+    /* console.log("payload", req.body); */
     // Check bank Branch exist or not
     const existing = await BankBranch.findById(id);
     if (!existing) throw new NotFoundError("Bank branch not found");

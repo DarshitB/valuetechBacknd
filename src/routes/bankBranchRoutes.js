@@ -11,21 +11,14 @@ const activityLogger = require("../middleware/activityLogger"); // Logs user act
 // Apply auth middleware to all branch routes
 router.use(auth);
 
-// GET all active bank branches
 router.get("/", bankBranchController.getAll);
-
-// GET a branch by ID
 router.get("/:id", bankBranchController.getById);
-
-// CREATE a new branch
 router.post(
   "/",
   checkPermission("add_bank_branch"), // Checks if user has 'add_bank_branch' permission
   activityLogger("bank_branch", (req, res) => res.locals.newRecordId), // Log creation activity
   bankBranchController.create
 );
-
-// UPDATE a branch
 router.put(
   "/:id",
   checkPermission("edit_bank_branch"), // Checks if user has 'edit_bank_branch' permission
@@ -33,8 +26,6 @@ router.put(
   activityLogger("bank_branch", (req) => req.params.id), // Log update activity
   bankBranchController.update
 );
-
-// SOFT DELETE a branch
 router.delete(
   "/:id",
   checkPermission("delete_bank_branch"), // Checks if user has 'delete_bank_branch' permission
