@@ -16,6 +16,8 @@ const categoryRoutes = require("./routes/categoryRoutes");
 const subcategoryRoutes = require("./routes/subcategoryRoutes");
 const childCategoryRoutes = require("./routes/childCategoryRoutes");
 const officerRouter = require("./routes/officerRouter");
+const fieldVerifierPortalOperationsRoutes = require("./routes/fieldVerifier/portalOperationsRoutes");
+const mobileAuthRoutes = require("./routes/fieldVerifier/authRoutes");
 
 const app = express();
 
@@ -26,7 +28,8 @@ const corsOptions = {
     "http://new.valuetechsolutions.org",
     "https://valuetechbacknd.onrender.com",
   ],
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"], // 👈 Add this line
   credentials: true,
 };
 
@@ -34,13 +37,13 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // ✅ Fix: Handle OPTIONS preflight *with method, not wildcard path*
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
   if (req.method === "OPTIONS") {
     res.sendStatus(200); // reply OK to preflight request
   } else {
     next();
   }
-});
+}); */
 
 app.use(express.json());
 
@@ -57,6 +60,10 @@ app.use("/api/categories", categoryRoutes);
 app.use("/api/subcategories", subcategoryRoutes);
 app.use("/api/child-categories", childCategoryRoutes);
 app.use("/api/officers", officerRouter);
+app.use("/api/field-verifiers", fieldVerifierPortalOperationsRoutes);
+
+/* mobile APIs */
+app.use("/api/mobile/auth", mobileAuthRoutes);
 
 app.use(errorHandler); // Error handling middleware
 

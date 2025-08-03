@@ -48,6 +48,13 @@ exports.seed = async function (knex) {
     "add_child_category",
     "edit_child_category",
     "delete_child_category",
+    
+    "view_field_verifier",
+    "add_field_verifier",
+    "edit_field_verifier",
+    "delete_field_verifier",
+    "view_field_verifier_login",
+    "delete_field_verifier_login",
   ];
 
   // Insert permissions

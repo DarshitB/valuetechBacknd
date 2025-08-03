@@ -990,3 +990,180 @@
 2025-07-29 18:53:12 | INFO | Environment: development
 2025-07-29 18:53:16 | INFO | Environment: development
 2025-07-29 18:59:54 | INFO | Environment: development
+2025-07-29 19:28:10 | INFO | Environment: development
+2025-07-31 11:14:32 | INFO | Environment: development
+2025-07-31 11:19:07 | INFO | Environment: development
+2025-07-31 11:22:28 | INFO | Environment: development
+2025-07-31 11:22:34 | INFO | Environment: development
+2025-07-31 11:32:25 | INFO | Environment: development
+2025-07-31 11:33:23 | INFO | Environment: development
+2025-07-31 11:36:33 | INFO | Environment: development
+2025-07-31 11:37:48 | INFO | Environment: development
+2025-07-31 11:40:59 | INFO | Environment: development
+2025-07-31 11:41:06 | ERROR | Error: Mobile number already exists.
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\fieldVerifier\portalOperationsController.js:96:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-31 11:41:22 | INFO | Environment: development
+2025-07-31 11:42:15 | INFO | Environment: development
+2025-07-31 11:42:25 | ERROR | Error: Email already exists.
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\fieldVerifier\portalOperationsController.js:90:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-31 11:42:50 | INFO | Environment: development
+2025-07-31 13:09:12 | INFO | Environment: development
+2025-07-31 13:10:59 | INFO | Environment: development
+2025-07-31 13:30:25 | ERROR | Error: Email already exists.
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\fieldVerifier\portalOperationsController.js:146:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-31 13:31:52 | ERROR | Error: Email already exists.
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\fieldVerifier\portalOperationsController.js:146:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-31 13:35:17 | INFO | Environment: development
+2025-07-31 13:35:18 | INFO | Environment: development
+2025-08-01 09:42:08 | INFO | Environment: development
+2025-08-03 09:15:58 | INFO | Environment: development
+2025-08-03 09:16:04 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-08-03 09:16:09 | ERROR | error: select "field_verifiers"."id", "field_verifiers"."name", "field_verifiers"."email", "field_verifiers"."mobile", "field_verifiers"."valid_minutes", "field_verifiers"."is_active", "field_verifiers"."created_at", "created_user"."name" as "created_by", "field_verifiers"."updated_at", "updated_user"."name" as "updated_by" from "field_verifiers" left join "users" as "created_user" on "field_verifiers"."created_by" = "created_user"."id" left join "users" as "updated_user" on "field_verifiers"."updated_by" = "updated_user"."id" where "field_verifiers"."deleted_at" is null - relation "field_verifiers" does not exist
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-03 09:16:09 | ERROR | error: select "field_verifiers"."id", "field_verifiers"."name", "field_verifiers"."email", "field_verifiers"."mobile", "field_verifiers"."valid_minutes", "field_verifiers"."is_active", "field_verifiers"."created_at", "created_user"."name" as "created_by", "field_verifiers"."updated_at", "updated_user"."name" as "updated_by" from "field_verifiers" left join "users" as "created_user" on "field_verifiers"."created_by" = "created_user"."id" left join "users" as "updated_user" on "field_verifiers"."updated_by" = "updated_user"."id" where "field_verifiers"."deleted_at" is null - relation "field_verifiers" does not exist
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-03 09:19:32 | INFO | Environment: development
+2025-08-03 09:21:06 | ERROR | error: select "field_verifiers"."id", "field_verifiers"."name", "field_verifiers"."email", "field_verifiers"."mobile", "field_verifiers"."valid_minutes", "field_verifiers"."is_active", "field_verifiers"."created_at", "created_user"."name" as "created_by", "field_verifiers"."updated_at", "updated_user"."name" as "updated_by" from "field_verifiers" left join "users" as "created_user" on "field_verifiers"."created_by" = "created_user"."id" left join "users" as "updated_user" on "field_verifiers"."updated_by" = "updated_user"."id" where "field_verifiers"."deleted_at" is null - column field_verifiers.valid_minutes does not exist
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-03 09:21:06 | ERROR | error: select "field_verifiers"."id", "field_verifiers"."name", "field_verifiers"."email", "field_verifiers"."mobile", "field_verifiers"."valid_minutes", "field_verifiers"."is_active", "field_verifiers"."created_at", "created_user"."name" as "created_by", "field_verifiers"."updated_at", "updated_user"."name" as "updated_by" from "field_verifiers" left join "users" as "created_user" on "field_verifiers"."created_by" = "created_user"."id" left join "users" as "updated_user" on "field_verifiers"."updated_by" = "updated_user"."id" where "field_verifiers"."deleted_at" is null - column field_verifiers.valid_minutes does not exist
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-03 09:50:01 | INFO | Environment: development
+2025-08-03 09:53:20 | INFO | Environment: development
+2025-08-03 09:58:18 | INFO | Environment: development
+2025-08-03 09:58:21 | INFO | Environment: development
+2025-08-03 09:59:33 | INFO | Environment: development
+2025-08-03 10:00:01 | INFO | Environment: development
+2025-08-03 10:00:11 | INFO | Environment: development
+2025-08-03 10:00:35 | INFO | Environment: development
+2025-08-03 10:02:41 | INFO | Environment: development
+2025-08-03 10:03:35 | ERROR | error: insert into "field_verifiers" ("created_at", "created_by", "email", "mobile", "name", "password", "valid_minutes") values ($1, $2, $3, $4, $5, $6, $7) returning * - column "valid_minutes" of relation "field_verifiers" does not exist
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-03 10:04:36 | ERROR | Error: Name, mobile, email, password, and valid_minutes are required.
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\fieldVerifier\portalOperationsController.js:82:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-08-03 10:08:57 | INFO | Environment: development
+2025-08-03 10:11:17 | INFO | Environment: development
+2025-08-03 10:11:28 | INFO | Environment: development
+2025-08-03 10:12:01 | INFO | Environment: development
+2025-08-03 10:12:11 | INFO | Environment: development
+2025-08-03 10:12:16 | ERROR | error: insert into "field_verifiers" ("city_id", "created_at", "created_by", "email", "mobile", "name", "password", "upi_id") values ($1, $2, $3, $4, $5, $6, $7, $8) returning * - invalid input syntax for type integer: "abc@icic"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-03 10:13:05 | INFO | Environment: development
+2025-08-03 10:17:44 | INFO | Environment: development
+2025-08-03 10:26:46 | INFO | Environment: development
+2025-08-03 10:29:03 | INFO | Environment: development
+2025-08-03 10:37:28 | INFO | Environment: development
+2025-08-03 10:42:02 | INFO | Environment: development
+2025-08-03 10:42:11 | INFO | Environment: development
+2025-08-03 10:43:13 | INFO | Environment: development
+2025-08-03 10:43:16 | INFO | Environment: development
+2025-08-03 10:47:11 | INFO | Environment: development
+2025-08-03 11:14:02 | INFO | Environment: development
+2025-08-03 11:23:49 | INFO | Environment: development
+2025-08-03 11:25:41 | INFO | Environment: development
+2025-08-03 11:25:43 | INFO | Environment: development
+2025-08-03 11:26:16 | INFO | Environment: development
+2025-08-03 11:26:43 | INFO | Environment: development
+2025-08-03 11:32:16 | INFO | Environment: development
+2025-08-03 11:32:31 | INFO | Environment: development
+2025-08-03 11:32:35 | INFO | Environment: development
+2025-08-03 11:39:06 | INFO | Environment: development
+2025-08-03 11:39:13 | INFO | Environment: development
+2025-08-03 11:39:18 | INFO | Environment: development
+2025-08-03 11:40:31 | INFO | Environment: development
+2025-08-03 11:40:33 | INFO | Environment: development
+2025-08-03 11:40:41 | INFO | Environment: development
+2025-08-03 11:42:26 | INFO | Environment: development
+2025-08-03 11:43:25 | INFO | Environment: development
+2025-08-03 11:45:08 | INFO | Environment: development
+2025-08-03 11:45:12 | INFO | Environment: development
+2025-08-03 11:46:37 | INFO | Environment: development
+2025-08-03 11:46:47 | INFO | Environment: development
+2025-08-03 11:47:58 | INFO | Environment: development
+2025-08-03 11:48:02 | INFO | Environment: development
+2025-08-03 11:48:18 | INFO | Environment: development
+2025-08-03 11:48:27 | INFO | Environment: development
+2025-08-03 11:50:47 | INFO | Environment: development
+2025-08-03 11:51:40 | INFO | Environment: development
+2025-08-03 11:52:08 | INFO | Environment: development
+2025-08-03 11:52:12 | INFO | Environment: development
+2025-08-03 11:53:51 | INFO | Environment: development
+2025-08-03 11:53:56 | INFO | Environment: development
+2025-08-03 12:07:23 | INFO | Environment: development
+2025-08-03 12:08:07 | INFO | Environment: development
+2025-08-03 12:08:09 | INFO | Environment: development
+2025-08-03 12:08:31 | INFO | Environment: development
+2025-08-03 12:10:48 | INFO | Environment: development
+2025-08-03 12:10:53 | INFO | Environment: development
+2025-08-03 12:11:03 | INFO | Environment: development
+2025-08-03 12:11:49 | INFO | Environment: development
+2025-08-03 12:15:44 | INFO | Environment: development
+2025-08-03 12:20:55 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-08-03 12:21:18 | INFO | Environment: development
+2025-08-03 12:26:29 | INFO | Environment: development
+2025-08-03 12:26:33 | INFO | Environment: development
+2025-08-03 12:26:42 | INFO | Environment: development
+2025-08-03 12:27:06 | INFO | Environment: development
+2025-08-03 12:28:00 | INFO | Environment: development

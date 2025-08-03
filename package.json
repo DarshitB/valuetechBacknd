@@ -7,6 +7,8 @@
     "start": "NODE_ENV=production node index.js", 
     "migrate:dev": "knex migrate:latest --env development",
     "migrate:prod": "knex migrate:latest --env production",
+    "migrate:down:dev": "knex migrate:down --env development",
+    "migrate:down:prod": "knex migrate:down --env production",
     "seed:dev": "knex seed:run --env development",
     "seed:prod": "knex seed:run --env production"
   },
