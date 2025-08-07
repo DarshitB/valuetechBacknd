@@ -8,7 +8,7 @@ const mobile_auth = {
         "id",
         "name",
         "mobile",
-        "email",
+        "username",
         "password",
         "valid_minutes",
         "is_active"
@@ -17,12 +17,12 @@ const mobile_auth = {
       .whereNull("deleted_at")
       .first(),
 
-  // Find verifier by mobile OR email
-  findByMobileOrEmail: (identifier) =>
+  // Find verifier by mobile OR username
+  findByMobileOrUsername: (identifier) =>
     db("field_verifiers")
-      .select("id", "name", "mobile", "email", "password", "is_active")
+      .select("id", "name", "mobile", "username", "password", "is_active")
       .where(function () {
-        this.where("mobile", identifier).orWhere("email", identifier);
+        this.where("mobile", identifier).orWhere("username", identifier);
       })
       .whereNull("deleted_at")
       .first(),

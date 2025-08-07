@@ -15,7 +15,7 @@ router.use(auth);
 
 router.get("/", fieldVerifierController.getAll);
 router.get("/:id", fieldVerifierController.getById);
-router.post("/check-email", fieldVerifierController.checkEmailExistence);
+router.post("/check-username", fieldVerifierController.checkUsernameExistence);
 router.post("/check-mobile", fieldVerifierController.findByMobile);
 router.post(
   "/",

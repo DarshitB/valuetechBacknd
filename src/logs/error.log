@@ -771,3 +771,8 @@
     at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
 2025-08-03 12:20:55 | ERROR | Error: Invalid password
     at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-08-06 18:40:00 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-08-06 18:41:34 | ERROR | Error: username already exists.
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\fieldVerifier\portalOperationsController.js:150:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

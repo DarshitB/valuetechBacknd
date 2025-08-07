@@ -1167,3 +1167,13 @@
 2025-08-03 12:26:42 | INFO | Environment: development
 2025-08-03 12:27:06 | INFO | Environment: development
 2025-08-03 12:28:00 | INFO | Environment: development
+2025-08-03 12:54:15 | INFO | Environment: development
+2025-08-03 13:05:49 | INFO | Environment: development
+2025-08-06 18:35:50 | INFO | Environment: development
+2025-08-06 18:40:00 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-08-06 18:41:34 | ERROR | Error: username already exists.
+    at exports.update (D:\React\valuetechsolutions\Backend\src\controllers\fieldVerifier\portalOperationsController.js:150:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-06 18:42:24 | INFO | Environment: development
+2025-08-06 18:50:31 | INFO | Environment: development

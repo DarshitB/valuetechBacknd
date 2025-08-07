@@ -17,7 +17,7 @@ const mobileAuthController = {
     }
 
     try {
-      const verifier = await mobileAuth.findByMobileOrEmail(username);
+      const verifier = await mobileAuth.findByMobileOrUsername(username);
 
       if (!verifier) {
         return res.status(404).json({ message: "User not found." });
@@ -59,7 +59,7 @@ const mobileAuthController = {
           id: verifier.id,
           name: verifier.name,
           mobile: verifier.mobile,
-          email: verifier.email,
+          username: verifier.username,
         },
         session,
       });

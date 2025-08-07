@@ -9,16 +9,26 @@ exports.up = async function (knex) {
 
     table.string("name").notNullable(); // Verifier name
     table.string("mobile", 15).notNullable(); // Unique mobile
-    table.string("email").nullable(); // Optional email
+    table.string("username").nullable(); // Optional username
     table.string("password").notNullable(); // Hashed password
 
     table.integer("city_id").unsigned().notNullable()
         .references("id").inTable("cities").onDelete("CASCADE"); // FK to cities
     table.string("upi_id").nullable(); // store upi id 
     table.string("upi_QR_image_url").nullable(); // store upi qur code image url
-
+    
     // Status column (optional, for soft disabling user)
     table.boolean("is_active").defaultTo(true);
+    
+    // More data to for filed verifier
+    table.string("bank_name").nullable(); // store bank name
+    table.string("verifier_name_in_bank").nullable(); // store verifier name which is same as in the bank
+    table.string("bank_address").nullable(); // store bank address
+    table.string("bank_account_type").nullable(); // store bank account type
+    table.string("bank_account_number").nullable(); // store bank account number
+    table.string("bank_IFSC_code").nullable(); // store bank ifsc code
+
+    table.string("adharcard_image_url").nullable(); // store adhar card image url
 
     // Audit columns
     table.timestamp("created_at").defaultTo(knex.fn.now());

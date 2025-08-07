@@ -18,7 +18,7 @@ const portal_operations = {
       .select(
         "field_verifiers.id",
         "field_verifiers.name",
-        "field_verifiers.email",
+        "field_verifiers.username",
         "field_verifiers.mobile",
         "field_verifiers.city_id",
         "cities.name as city_name",
@@ -48,7 +48,7 @@ const portal_operations = {
       .select(
         "field_verifiers.id",
         "field_verifiers.name",
-        "field_verifiers.email",
+        "field_verifiers.username",
         "field_verifiers.mobile",
         "field_verifiers.city_id",
         "cities.name as city_name",
@@ -63,11 +63,11 @@ const portal_operations = {
       .whereNull("field_verifiers.deleted_at")
       .first(),
 
-  // Check for duplicate email (if any)
-  findByEmail: (email) =>
+  // Check for duplicate username (if any)
+  findByUsername: (username) =>
     db("field_verifiers")
-      .select("id", "email")
-      .where("email", email)
+      .select("id", "username")
+      .where("username", username)
       .whereNull("deleted_at")
       .first(),
 

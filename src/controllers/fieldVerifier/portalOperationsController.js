@@ -52,16 +52,16 @@ exports.findByMobile = async (req, res) => {
   }
 };
 
-// Check if email already exists
-exports.checkEmailExistence = async (req, res) => {
+// Check if username already exists
+exports.checkUsernameExistence = async (req, res) => {
   try {
-    const { email } = req.body;
+    const { username } = req.body;
 
-    if (!email || email.trim() === "") {
-      throw new BadRequestError("Email is required.");
+    if (!username || username.trim() === "") {
+      throw new BadRequestError("Username is required.");
     }
 
-    const verifier = await FieldVerifier.findByEmail(email);
+    const verifier = await FieldVerifier.findByUsername(username);
 
     if (verifier) {
       return res.status(200).json({ exists: true });
@@ -69,7 +69,7 @@ exports.checkEmailExistence = async (req, res) => {
       return res.status(200).json({ exists: false });
     }
   } catch (err) {
-    console.error("Error in checkEmailExistence:", err);
+    console.error("Error in checkUsernameExistence:", err);
     return res.status(500).json({ message: "Server error." });
   }
 };
@@ -77,18 +77,31 @@ exports.checkEmailExistence = async (req, res) => {
 // Create a new field verifier
 exports.create = async (req, res, next) => {
   try {
-    const { name, email, mobile, password, city_id, upi_id } = req.body;
+    const {
+      name,
+      username,
+      mobile,
+      password,
+      city_id,
+      upi_id,
+      bank_name,
+      verifier_name_in_bank,
+      bank_address,
+      bank_account_type,
+      bank_account_number,
+      bank_IFSC_code,
+    } = req.body;
 
-    if (!name || !email || !mobile || !password || !city_id) {
+    if (!name || !username || !mobile || !password || !city_id) {
       throw new BadRequestError(
-        "Name, mobile, email, password, and city are required."
+        "Name, mobile, username, password, and city are required."
       );
     }
 
-    // Check if email already exists
-    const existingEmail = await FieldVerifier.findByEmail(email);
-    if (existingEmail) {
-      throw new ConflictError("Email already exists.");
+    // Check if username already exists
+    const existingUsername = await FieldVerifier.findByUsername(username);
+    if (existingUsername) {
+      throw new ConflictError("username already exists.");
     }
 
     // Check if mobile already exists
@@ -101,11 +114,17 @@ exports.create = async (req, res, next) => {
 
     const [verifier] = await FieldVerifier.create({
       name,
-      email,
+      username,
       mobile,
       password: hash,
       city_id,
       upi_id,
+      bank_name,
+      verifier_name_in_bank,
+      bank_address,
+      bank_account_type,
+      bank_account_number,
+      bank_IFSC_code,
       created_by: req.user?.id,
       created_at: new Date(),
     });
@@ -127,7 +146,7 @@ exports.create = async (req, res, next) => {
     res.status(201).json(enriched);
   } catch (err) {
     if (err.code === "23505") {
-      return next(new ConflictError("Email or mobile already exists."));
+      return next(new ConflictError("Username or mobile already exists."));
     }
     next(err);
   }
@@ -137,17 +156,30 @@ exports.create = async (req, res, next) => {
 exports.update = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const { name, email, mobile, password, city_id, upi_id, is_active } =
-      req.body;
+    const {
+      name,
+      username,
+      mobile,
+      password,
+      city_id,
+      upi_id,
+      is_active,
+      bank_name,
+      verifier_name_in_bank,
+      bank_address,
+      bank_account_type,
+      bank_account_number,
+      bank_IFSC_code,
+    } = req.body;
 
     const existing = await FieldVerifier.findById(id);
     if (!existing) throw new NotFoundError("Field Verifier not found");
 
-    // Check if email is being changed and if the new email already exists
-    if (email && email !== existing.email) {
-      const emailExists = await FieldVerifier.findByEmail(email);
-      if (emailExists && emailExists.id !== id) {
-        throw new ConflictError("Email already exists.");
+    // Check if username is being changed and if the new username already exists
+    if (username && username !== existing.username) {
+      const usernameExists = await FieldVerifier.findByUsername(username);
+      if (usernameExists && usernameExists.id !== id) {
+        throw new ConflictError("username already exists.");
       }
     }
 
@@ -161,11 +193,17 @@ exports.update = async (req, res, next) => {
 
     const updatedData = {
       name,
-      email,
+      username,
       mobile,
       city_id,
       upi_id,
       is_active,
+      bank_name,
+      verifier_name_in_bank,
+      bank_address,
+      bank_account_type,
+      bank_account_number,
+      bank_IFSC_code,
       updated_by: req.user?.id,
       updated_at: new Date(),
     };
@@ -193,7 +231,7 @@ exports.update = async (req, res, next) => {
     res.json(enriched);
   } catch (err) {
     if (err.code === "23505") {
-      return next(new ConflictError("Email or mobile already exists."));
+      return next(new ConflictError("Username or mobile already exists."));
     }
     next(err);
   }
