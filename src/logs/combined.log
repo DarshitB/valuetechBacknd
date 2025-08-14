@@ -1177,3 +1177,183 @@
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2025-08-06 18:42:24 | INFO | Environment: development
 2025-08-06 18:50:31 | INFO | Environment: development
+2025-08-13 12:14:36 | INFO | Environment: development
+2025-08-13 12:15:40 | ERROR | Error: Undefined binding(s) detected when compiling FIRST. Undefined column(s): [officers.id] query: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = ? limit ?
+    at QueryCompiler_PG.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querycompiler.js:112:13)
+    at QueryBuilder_PostgreSQL.toSQL (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\query\querybuilder.js:84:44)
+    at ensureConnectionCallback (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\internal\ensure-connection-callback.js:4:30)
+    at Runner.ensureConnection (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:318:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Runner.run (D:\React\valuetechsolutions\Backend\node_modules\knex\lib\execution\runner.js:30:19)
+    at async Object.findById (D:\React\valuetechsolutions\Backend\src\models\officer.js:88:21)
+    at async exports.create (D:\React\valuetechsolutions\Backend\src\controllers\orderController.js:57:21)
+2025-08-13 12:16:51 | INFO | Environment: development
+2025-08-13 12:17:13 | INFO | Environment: development
+2025-08-13 12:17:32 | INFO | Environment: development
+2025-08-13 12:17:33 | INFO | Environment: development
+2025-08-13 12:18:17 | INFO | Environment: development
+2025-08-13 12:18:36 | INFO | Environment: development
+2025-08-13 12:18:54 | INFO | Environment: development
+2025-08-13 12:19:05 | INFO | Environment: development
+2025-08-13 12:19:22 | INFO | Environment: development
+2025-08-13 12:40:13 | INFO | Environment: development
+2025-08-13 12:40:25 | INFO | Environment: development
+2025-08-13 12:42:21 | INFO | Environment: development
+2025-08-13 12:42:42 | INFO | Environment: development
+2025-08-13 12:42:58 | INFO | Environment: development
+2025-08-13 12:43:08 | INFO | Environment: development
+2025-08-13 12:43:17 | INFO | Environment: development
+2025-08-13 12:43:35 | INFO | Environment: development
+2025-08-13 12:47:39 | INFO | Environment: development
+2025-08-13 12:50:32 | INFO | Environment: development
+2025-08-13 12:50:36 | ERROR | TypeError: (intermediate value) is not iterable
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\orderController.js:84:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-13 12:51:44 | INFO | Environment: development
+2025-08-13 12:52:39 | INFO | Environment: development
+2025-08-13 12:52:48 | ERROR | TypeError: (intermediate value) is not iterable
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\orderController.js:86:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-13 12:53:43 | INFO | Environment: development
+2025-08-13 12:53:51 | INFO | Environment: development
+2025-08-13 12:54:05 | INFO | Environment: development
+2025-08-13 12:54:34 | INFO | Environment: development
+2025-08-13 12:54:37 | INFO | Environment: development
+2025-08-14 08:47:52 | INFO | Environment: development
+2025-08-14 08:51:05 | INFO | Environment: development
+2025-08-14 08:51:30 | INFO | Environment: development
+2025-08-14 08:51:43 | INFO | Environment: development
+2025-08-14 09:03:44 | INFO | Environment: development
+2025-08-14 09:09:41 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:09:41 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:11:14 | ERROR | Error: Customer name and contact are required.
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\orderController.js:53:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-08-14 09:13:20 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:13:20 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:13:39 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:13:39 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:16:19 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:16:19 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:16:40 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:16:41 | ERROR | error: select "officers"."id", "officers"."user_id", "officers"."branch_id", "users"."name" as "name", "users"."email" as "email", "users"."mobile" as "mobile", "officers"."is_active", "officers"."created_at", "officers"."updated_at", "bank"."id" as "bank_id", "bank"."name" as "bank_name", "bank_branch"."id" as "branch_id", "bank_branch"."name" as "branch_name" from "officers" left join "users" on "officers"."user_id" = "users"."id" left join "bank_branch" on "officers"."branch_id" = "bank_branch"."id" left join "bank" on "bank_branch"."bank_id" = "bank"."id" where "officers"."deleted_at" is null and "officers"."id" = $1 limit $2 - invalid input syntax for type integer: "undefined"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-14 09:23:12 | ERROR | Error: Customer name and contact are required.
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\orderController.js:53:13)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\activityLogger.js:108:5
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at D:\React\valuetechsolutions\Backend\src\middleware\permission.js:10:14
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+2025-08-14 09:29:39 | INFO | Environment: development
+2025-08-14 09:47:40 | INFO | Environment: development
+2025-08-14 09:47:53 | INFO | Environment: development
+2025-08-14 09:48:02 | INFO | Environment: development
+2025-08-14 09:48:18 | INFO | Environment: development
+2025-08-14 09:48:27 | INFO | Environment: development
+2025-08-14 09:48:41 | INFO | Environment: development
+2025-08-14 09:51:26 | INFO | Environment: development
+2025-08-14 09:51:35 | INFO | Environment: development
+2025-08-14 09:51:44 | INFO | Environment: development
+2025-08-14 09:54:39 | INFO | Environment: development

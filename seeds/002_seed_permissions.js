@@ -55,6 +55,11 @@ exports.seed = async function (knex) {
     "delete_field_verifier",
     "view_field_verifier_login",
     "delete_field_verifier_login",
+
+    "view_order",
+    "add_order",
+    "edit_order",
+    "delete_order",
   ];
 
   // Insert permissions
@@ -63,14 +68,14 @@ exports.seed = async function (knex) {
       return knex("permissions").insert({ name }).returning("id");
     })
   );
-  const allPermissionIds = inserted.map(([row]) => row.id);
+  /*const allPermissionIds = inserted.map(([row]) => row.id);
 
   const developerAdminRole = await knex("roles")
     .where({ name: "developer_admin" })
     .first();
 
   // Assign all permissions to developer_admin
-  /*  for (const permission_id of allPermissionIds) {
+    for (const permission_id of allPermissionIds) {
     await knex("role_permissions").insert({
       role_id: developerAdminRole.id,
       permission_id,

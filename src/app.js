@@ -16,6 +16,7 @@ const categoryRoutes = require("./routes/categoryRoutes");
 const subcategoryRoutes = require("./routes/subcategoryRoutes");
 const childCategoryRoutes = require("./routes/childCategoryRoutes");
 const officerRouter = require("./routes/officerRouter");
+const orderRoutes = require("./routes/orderRoutes");
 const fieldVerifierPortalOperationsRoutes = require("./routes/fieldVerifier/portalOperationsRoutes");
 const mobileAuthRoutes = require("./routes/fieldVerifier/authRoutes");
 
@@ -60,6 +61,7 @@ app.use("/api/categories", categoryRoutes);
 app.use("/api/subcategories", subcategoryRoutes);
 app.use("/api/child-categories", childCategoryRoutes);
 app.use("/api/officers", officerRouter);
+app.use("/api/orders", orderRoutes);
 app.use("/api/field-verifiers", fieldVerifierPortalOperationsRoutes);
 
 /* mobile APIs */

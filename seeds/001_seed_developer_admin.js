@@ -1,3 +1,4 @@
+/* seed should only firsttie creating database it will throught error if databse created and have some data to it */
 const bcrypt = require("bcrypt");
 
 exports.seed = async function (knex) {
