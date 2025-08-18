@@ -13,6 +13,9 @@ const order = {
       .leftJoin("users as manager", "orders.manager_id", "manager.id")
       .leftJoin("users as created_user", "orders.created_by", "created_user.id")
       .leftJoin("users as updated_user", "orders.updated_by", "updated_user.id")
+      .leftJoin("child_category", "orders.child_category_id", "child_category.id")
+      .leftJoin("sub_category", "child_category.sub_category_id", "sub_category.id")
+      .leftJoin("category", "sub_category.category_id", "category.id")
       .select(
         "orders.id",
         "orders.order_number",
@@ -38,7 +41,13 @@ const order = {
         "orders.created_at",
         "created_user.name as created_by",
         "orders.updated_at",
-        "updated_user.name as updated_by"
+        "updated_user.name as updated_by",
+        "child_category.id as child_category_id",
+        "child_category.name as child_category_name",
+        "sub_category.id as sub_category_id",
+        "sub_category.name as sub_category_name",
+        "category.id as category_id",
+        "category.name as category_name"
       )
       .whereNull("orders.deleted_at");
 
@@ -70,6 +79,9 @@ const order = {
       .leftJoin("users as manager", "orders.manager_id", "manager.id")
       .leftJoin("users as created_user", "orders.created_by", "created_user.id")
       .leftJoin("users as updated_user", "orders.updated_by", "updated_user.id")
+      .leftJoin("child_category", "orders.child_category_id", "child_category.id")
+      .leftJoin("sub_category", "child_category.sub_category_id", "sub_category.id")
+      .leftJoin("category", "sub_category.category_id", "category.id")
       .select(
         "orders.id",
         "orders.order_number",
@@ -95,7 +107,13 @@ const order = {
         "orders.created_at",
         "created_user.name as created_by",
         "orders.updated_at",
-        "updated_user.name as updated_by"
+        "updated_user.name as updated_by",
+        "child_category.id as child_category_id",
+        "child_category.name as child_category_name",
+        "sub_category.id as sub_category_id",
+        "sub_category.name as sub_category_name",
+        "category.id as category_id",
+        "category.name as category_name"
       )
       .whereNull("orders.deleted_at")
       .where("orders.id", id)
@@ -130,7 +148,7 @@ const order = {
         "order_status_history.changed_at"
       )
       .where("order_status_history.order_id", id)
-      .orderBy("order_status_history.changed_at", "desc");
+      .orderBy("order_status_history.id", "desc");
 
     return { ...order, status_history: statusHistory };
   },

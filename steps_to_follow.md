@@ -1,5 +1,5 @@
 # to create migration
-npx knex migrate:make 009_create_order_statesMaster_statusHistory_schema
+npx knex migrate:make 011_create_order_comment_tags_schema
 
 # to run migration
 npx knex migrate:latest   # use package.json
@@ -14,7 +14,9 @@ npm run migrate:down:dev 20250813044629_009_create_order_statesMaster_statusHist
 
 # to rollback last migration 
 npx knex migrate:down
-
+# to rolleback cia file name
+npx knex migrate:down 20250813044629_009_create_order_statesMaster_statusHistory_schema.js --env development
+  
 # to create seed
 npx knex seed:make 003_seed_order_status_master
 

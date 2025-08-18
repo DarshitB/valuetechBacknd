@@ -29,8 +29,11 @@ exports.up = async function (knex) {
     table.string("contact", 20).notNullable();
     table.string("alternative_contact", 20).nullable();
     
+    table.integer("child_category_id").unsigned().nullable()
+    .references("id").inTable("child_category").onDelete("RESTRICT");
+
     table.integer("officer_id").unsigned().nullable()
-    .references("id").inTable("users").onDelete("RESTRICT");
+    .references("id").inTable("officers").onDelete("RESTRICT");
     
     table.integer("manager_id").unsigned().nullable()
     .references("id").inTable("users").onDelete("RESTRICT");

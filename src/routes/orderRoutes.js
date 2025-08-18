@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const orderController = require("../controllers/orderController");
+const orderCommentRoutes = require("./orderCommentRoutes");
 
 const auth = require("../middleware/auth"); // Middleware to check authentication
 const checkPermission = require("../middleware/permission"); // Middleware to check user permissions
@@ -32,5 +33,8 @@ router.delete(
   activityLogger("orders", (req) => req.params.id), // Log deletion
   orderController.softDelete
 );
+
+// Nested routes for order comments (chat/comments)
+router.use("/:orderId/comments", orderCommentRoutes);
 
 module.exports = router;
