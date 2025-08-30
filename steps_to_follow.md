@@ -18,14 +18,14 @@ npx knex migrate:down
 npx knex migrate:down 20250813044629_009_create_order_statesMaster_statusHistory_schema.js --env development
   
 # to create seed
-npx knex seed:make 003_seed_order_status_master
+npx knex seed:make 003_seed_roles
 
 # to run seed 
 npx knex seed:run # use package.json
 
 knex seed:run --env production # use package.json
 
-npx knex seed:run --specific=003_seed_order_status_master.js --env development
+npx knex seed:run --specific=004_seed_order_status_master.js --env development
 
 # to remove all git branch from windows
 Remove-Item -Recurse -Force .git
