@@ -20,14 +20,24 @@ exports.getAll = async (req, res, next) => {
   }
 };
 
+// Get All Orders for Mobile App
+exports.getForMobile = async (req, res, next) => {
+  try {
+    const orders = await Order.getForMobile();
+    res.json(orders);
+  } catch (err) {
+    next(err);
+  }
+};
+
 // Get Order by ID (with status history)
 exports.getById = async (req, res, next) => {
   try {
     const { id } = req.params;
     const order = await Order.findById(id, req.user);
-    
+
     if (!order) throw new NotFoundError("Order not found");
-    
+
     res.json(order);
   } catch (err) {
     next(err);
@@ -35,6 +45,7 @@ exports.getById = async (req, res, next) => {
 };
 
 // Create Order
+// CONFIGURATION: Change ORDER_NUMBER_LENGTH below to modify order number length
 exports.create = async (req, res, next) => {
   try {
     const {
@@ -46,14 +57,12 @@ exports.create = async (req, res, next) => {
       manager_id,
       registration_number,
       place_of_inspection,
-      date_of_inspection
+      date_of_inspection,
     } = req.body;
 
     // Validation - only customer_name and contact are mandatory
     if (!customer_name || !contact) {
-      throw new BadRequestError(
-        "Customer name and contact are required."
-      );
+      throw new BadRequestError("Customer name and contact are required.");
     }
 
     // Validate officer if provided
@@ -78,8 +87,41 @@ exports.create = async (req, res, next) => {
       orderStatusId = 1;
     }
 
+    // Generate unique random order number with configurable length
+    const ORDER_NUMBER_LENGTH = 8; // Change this number to modify order number length
+
+    const generateOrderNumber = async () => {
+      const maxAttempts = 10;
+      let attempts = 0;
+
+      while (attempts < maxAttempts) {
+        // Generate random characters and numbers
+        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        let orderNumber = "";
+
+        // Generate random order number with specified length
+        for (let i = 0; i < ORDER_NUMBER_LENGTH; i++) {
+          const randomIndex = Math.floor(Math.random() * characters.length);
+          orderNumber += characters[randomIndex];
+        }
+
+        // Check if this order number already exists
+        const existingOrder = await Order.findByOrderNumber(orderNumber);
+        if (!existingOrder) {
+          return orderNumber;
+        }
+        attempts++;
+      }
+      throw new Error(
+        "Unable to generate unique order number after multiple attempts"
+      );
+    };
+
+    const uniqueOrderNumber = await generateOrderNumber();
+
     // Create order with determined status
     const orderData = {
+      order_number: uniqueOrderNumber,
       customer_name,
       contact,
       alternative_contact: alternative_contact || null,
@@ -157,7 +199,7 @@ exports.update = async (req, res, next) => {
       manager_id,
       registration_number,
       place_of_inspection,
-      date_of_inspection
+      date_of_inspection,
     } = req.body;
 
     // Fetch existing order to check permissions
@@ -166,9 +208,7 @@ exports.update = async (req, res, next) => {
 
     // Validation - only customer_name and contact are mandatory
     if (!customer_name || !contact) {
-      throw new BadRequestError(
-        "Customer name and contact are required."
-      );
+      throw new BadRequestError("Customer name and contact are required.");
     }
 
     // Validate officer if provided
@@ -203,25 +243,58 @@ exports.update = async (req, res, next) => {
     const updateData = {
       customer_name,
       contact,
-      alternative_contact: alternative_contact !== undefined ? alternative_contact : existingOrder.alternative_contact,
-      child_category_id: child_category_id !== undefined ? child_category_id : existingOrder.child_category_id,
-      officer_id: officer_id !== undefined ? officer_id : existingOrder.officer_id,
-      manager_id: manager_id !== undefined ? manager_id : existingOrder.manager_id,
-      registration_number: registration_number !== undefined ? registration_number : existingOrder.registration_number,
-      place_of_inspection: place_of_inspection !== undefined ? place_of_inspection : existingOrder.place_of_inspection,
-      date_of_inspection: date_of_inspection !== undefined ? date_of_inspection : existingOrder.date_of_inspection,
+      alternative_contact:
+        alternative_contact !== undefined
+          ? alternative_contact
+          : existingOrder.alternative_contact,
+      child_category_id:
+        child_category_id !== undefined
+          ? child_category_id
+          : existingOrder.child_category_id,
+      officer_id:
+        officer_id !== undefined ? officer_id : existingOrder.officer_id,
+      manager_id:
+        manager_id !== undefined ? manager_id : existingOrder.manager_id,
+      registration_number:
+        registration_number !== undefined
+          ? registration_number
+          : existingOrder.registration_number,
+      place_of_inspection:
+        place_of_inspection !== undefined
+          ? place_of_inspection
+          : existingOrder.place_of_inspection,
+      date_of_inspection:
+        date_of_inspection !== undefined
+          ? date_of_inspection
+          : existingOrder.date_of_inspection,
       current_status_id: newStatusId,
       updated_by: req.user?.id,
       updated_at: new Date(),
     };
 
-    const updatedOrder = await Order.updateOrder(orderId, updateData, req.user?.id);
+    const updatedOrder = await Order.updateOrder(
+      orderId,
+      updateData,
+      req.user?.id
+    );
 
     // Create status history entry if status changed
-    if (manager_id !== undefined && newStatusId !== existingOrder.current_status_id) {
+    if (
+      manager_id !== undefined &&
+      newStatusId !== existingOrder.current_status_id
+    ) {
       const statusHistoryData = {
         order_id: orderId,
         status_id: newStatusId,
+        changed_by: req.user?.id,
+        changed_at: new Date(),
+      };
+
+      await OrderStatusHistory.createStatusHistory(statusHistoryData);
+    } else {
+      const statusHistoryData = {
+        order_id: orderId,
+        activity_extra: "Order Edited",
         changed_by: req.user?.id,
         changed_at: new Date(),
       };

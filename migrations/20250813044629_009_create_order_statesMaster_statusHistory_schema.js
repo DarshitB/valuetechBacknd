@@ -1,12 +1,12 @@
 /**
- * Orders Module Migration with Auto Order Number
+ * Orders Module Migration - Basic Table Structure
  *
  * Tables:
  * 1. order_status_master - Stores predefined order statuses
  * 2. orders - Main orders table with current status
  * 3. order_status_history - Tracks status change history
  *
- * Auto Generates: order_number like "ORD00000001"
+ * Note: Order number generation will be handled at controller level
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
@@ -23,7 +23,7 @@ exports.up = async function (knex) {
     table.increments("id").primary(); // Internal ID (auto increment)
 
     table.string("order_number", 20).unique().notNullable();
-    // Custom formatted order number like 'ORD00000001' (set via trigger)
+    // Order number will be generated at controller level
 
     table.string("customer_name", 255).notNullable();
     table.string("contact", 20).notNullable();
@@ -64,32 +64,16 @@ exports.up = async function (knex) {
     table.integer("order_id").unsigned().notNullable()
       .references("id").inTable("orders").onDelete("CASCADE");
 
-    table.integer("status_id").unsigned().notNullable()
+    table.integer("status_id").unsigned().nullable()
       .references("id").inTable("order_status_master").onDelete("RESTRICT");
 
+    table.string("activity_extra").nullable();
+      
     table.integer("changed_by").unsigned().notNullable()
       .references("id").inTable("users").onDelete("RESTRICT");
 
     table.timestamp("changed_at").defaultTo(knex.fn.now());
   });
-
-  // Create function & trigger for auto order_number generation (PostgreSQL)
-  await knex.raw(`
-    CREATE OR REPLACE FUNCTION generate_order_number()
-    RETURNS TRIGGER AS $$
-    BEGIN
-      NEW.order_number := 'ORD' || LPAD(NEW.id::text, 8, '0');
-      RETURN NEW;
-    END;
-    $$ LANGUAGE plpgsql;
-  `);
-
-  await knex.raw(`
-    CREATE TRIGGER set_order_number
-    BEFORE INSERT ON orders
-    FOR EACH ROW
-    EXECUTE FUNCTION generate_order_number();
-  `);
 };
 
 /**
@@ -97,10 +81,6 @@ exports.up = async function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = async function (knex) {
-  // Drop trigger & function first
-  await knex.raw(`DROP TRIGGER IF EXISTS set_order_number ON orders;`);
-  await knex.raw(`DROP FUNCTION IF EXISTS generate_order_number;`);
-
   // Drop tables
   await knex.schema.dropTableIfExists("order_status_history");
   await knex.schema.dropTableIfExists("orders");

@@ -1642,3 +1642,457 @@
     at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
 2025-08-18 10:12:21 | INFO | Environment: development
 2025-08-18 10:12:23 | INFO | Environment: development
+2025-08-19 06:26:38 | INFO | Environment: development
+2025-08-19 06:49:43 | INFO | Environment: development
+2025-08-19 06:59:38 | INFO | Environment: development
+2025-08-19 07:00:36 | INFO | Environment: development
+2025-08-19 07:01:07 | INFO | Environment: development
+2025-08-19 10:14:28 | INFO | Environment: development
+2025-08-19 10:25:25 | INFO | Environment: development
+2025-08-19 10:27:38 | INFO | Environment: development
+2025-08-19 10:27:59 | INFO | Environment: development
+2025-08-19 10:28:20 | INFO | Environment: development
+2025-08-19 10:50:42 | INFO | Environment: development
+2025-08-19 10:52:21 | INFO | Environment: development
+2025-08-19 10:54:17 | INFO | Environment: development
+2025-08-19 10:59:47 | INFO | Environment: development
+2025-08-19 11:09:08 | INFO | Environment: development
+2025-08-19 11:11:06 | INFO | Environment: development
+2025-08-19 11:13:01 | INFO | Environment: development
+2025-08-19 11:13:03 | INFO | Environment: development
+2025-08-19 11:13:48 | INFO | Environment: development
+2025-08-19 11:16:11 | INFO | Environment: development
+2025-08-19 11:19:51 | INFO | Environment: development
+2025-08-19 11:22:00 | INFO | Environment: development
+2025-08-19 11:22:22 | INFO | Environment: development
+2025-08-19 11:22:58 | INFO | Environment: development
+2025-08-19 11:25:56 | INFO | Environment: development
+2025-08-19 11:26:24 | INFO | Environment: development
+2025-08-19 11:26:31 | INFO | Environment: development
+2025-08-19 11:30:25 | INFO | Environment: development
+2025-08-19 11:30:37 | INFO | Environment: development
+2025-08-19 11:31:11 | INFO | Environment: development
+2025-08-19 11:32:18 | INFO | Environment: development
+2025-08-19 11:32:38 | INFO | Environment: development
+2025-08-19 11:35:33 | INFO | Environment: development
+2025-08-19 11:36:46 | INFO | Environment: development
+2025-08-19 11:37:38 | INFO | Environment: development
+2025-08-19 11:40:06 | INFO | Environment: development
+2025-08-19 11:47:53 | INFO | Environment: development
+2025-08-19 11:51:00 | INFO | Environment: development
+2025-08-19 11:55:45 | INFO | Environment: development
+2025-08-19 11:56:40 | INFO | Environment: development
+2025-08-19 11:57:35 | INFO | Environment: development
+2025-08-19 11:58:06 | INFO | Environment: development
+2025-08-19 12:01:41 | INFO | Environment: development
+2025-08-19 12:01:44 | ERROR | TypeError: Cannot read properties of undefined (reading 'role_name')
+    at Object.getAllOrders (D:\React\valuetechsolutions\Backend\src\models\order.js:55:14)
+    at exports.getAll (D:\React\valuetechsolutions\Backend\src\controllers\orderController.js:16:32)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\React\valuetechsolutions\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at D:\React\valuetechsolutions\Backend\node_modules\router\index.js:295:15
+    at processParams (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:582:12)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:291:5)
+2025-08-19 12:05:02 | INFO | Environment: development
+2025-08-19 12:05:27 | INFO | Environment: development
+2025-08-19 12:05:36 | INFO | Environment: development
+2025-08-19 12:06:53 | INFO | Environment: development
+2025-08-19 12:06:59 | INFO | Environment: development
+2025-08-19 13:27:02 | INFO | Environment: development
+2025-08-21 11:10:19 | INFO | Environment: development
+2025-08-21 11:14:07 | ERROR | PayloadTooLargeError: request entity too large
+    at readStream (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:163:17)
+    at getRawBody (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:116:12)
+    at read (D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\read.js:74:3)
+    at jsonParser (D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\types\json.js:125:5)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:342:13)
+    at D:\React\valuetechsolutions\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:582:12)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:291:5)
+    at cors (D:\React\valuetechsolutions\Backend\node_modules\cors\lib\index.js:188:7)
+2025-08-21 11:14:29 | INFO | Environment: development
+2025-08-21 11:14:33 | ERROR | PayloadTooLargeError: request entity too large
+    at readStream (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:163:17)
+    at getRawBody (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:116:12)
+    at read (D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\read.js:74:3)
+    at jsonParser (D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\types\json.js:125:5)
+    at Layer.handleRequest (D:\React\valuetechsolutions\Backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:342:13)
+    at D:\React\valuetechsolutions\Backend\node_modules\router\index.js:297:9
+    at processParams (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:582:12)
+    at next (D:\React\valuetechsolutions\Backend\node_modules\router\index.js:291:5)
+    at cors (D:\React\valuetechsolutions\Backend\node_modules\cors\lib\index.js:188:7)
+2025-08-21 11:15:11 | INFO | Environment: development
+2025-08-21 11:15:23 | INFO | Environment: development
+2025-08-21 11:16:56 | INFO | Environment: development
+2025-08-21 11:17:42 | INFO | Environment: development
+2025-08-21 11:36:16 | INFO | Environment: development
+2025-08-21 13:59:51 | INFO | Environment: development
+2025-08-21 14:06:20 | INFO | Environment: development
+2025-08-21 14:06:35 | INFO | Environment: development
+2025-08-21 14:07:13 | INFO | Environment: development
+2025-08-21 14:14:48 | INFO | Environment: development
+2025-08-21 14:15:27 | INFO | Environment: development
+2025-08-21 14:16:47 | INFO | Environment: development
+2025-08-21 14:17:35 | INFO | Environment: development
+2025-08-21 14:17:46 | INFO | Environment: development
+2025-08-21 14:18:06 | INFO | Environment: development
+2025-08-21 14:19:20 | INFO | Environment: development
+2025-08-21 14:19:42 | INFO | Environment: development
+2025-08-21 14:19:47 | INFO | Environment: development
+2025-08-21 14:20:06 | INFO | Environment: development
+2025-08-21 14:20:51 | INFO | Environment: development
+2025-08-21 14:21:52 | INFO | Environment: development
+2025-08-21 14:22:15 | INFO | Environment: development
+2025-08-21 14:22:40 | INFO | Environment: development
+2025-08-21 14:23:02 | INFO | Environment: development
+2025-08-21 14:23:48 | INFO | Environment: development
+2025-08-21 14:24:26 | INFO | Environment: development
+2025-08-21 14:24:29 | INFO | Environment: development
+2025-08-21 14:25:36 | INFO | Environment: development
+2025-08-21 14:26:05 | INFO | Environment: development
+2025-08-21 14:26:18 | INFO | Environment: development
+2025-08-21 14:26:31 | INFO | Environment: development
+2025-08-21 14:27:00 | INFO | Environment: development
+2025-08-21 14:27:35 | INFO | Environment: development
+2025-08-21 14:28:04 | INFO | Environment: development
+2025-08-21 14:28:28 | INFO | Environment: development
+2025-08-21 14:28:45 | INFO | Environment: development
+2025-08-21 14:28:55 | INFO | Environment: development
+2025-08-21 14:29:09 | INFO | Environment: development
+2025-08-21 14:31:25 | INFO | Environment: development
+2025-08-21 14:33:16 | INFO | Environment: development
+2025-08-21 14:33:33 | INFO | Environment: development
+2025-08-21 14:33:57 | INFO | Environment: development
+2025-08-21 14:34:41 | INFO | Environment: development
+2025-08-21 14:35:49 | INFO | Environment: development
+2025-08-21 14:37:57 | INFO | Environment: development
+2025-08-21 14:47:58 | INFO | Environment: development
+2025-08-21 14:48:27 | INFO | Environment: development
+2025-08-21 14:48:32 | INFO | Environment: development
+2025-08-21 14:48:55 | INFO | Environment: development
+2025-08-21 14:49:08 | INFO | Environment: development
+2025-08-21 14:50:56 | INFO | Environment: development
+2025-08-21 14:50:58 | INFO | Environment: development
+2025-08-21 14:52:47 | INFO | Environment: development
+2025-08-21 14:53:24 | INFO | Environment: development
+2025-08-21 14:54:00 | INFO | Environment: development
+2025-08-21 14:55:25 | INFO | Environment: development
+2025-08-21 14:55:58 | INFO | Environment: development
+2025-08-21 14:56:06 | INFO | Environment: development
+2025-08-21 17:25:46 | INFO | Environment: development
+2025-08-21 17:25:52 | INFO | Environment: development
+2025-08-21 17:42:55 | INFO | Environment: development
+2025-08-21 17:43:50 | INFO | Environment: development
+2025-08-21 17:43:53 | INFO | Environment: development
+2025-08-21 18:01:28 | INFO | Environment: development
+2025-08-21 18:07:38 | ERROR | MulterError: Unexpected field
+    at wrappedFileFilter (D:\React\valuetechsolutions\Backend\node_modules\multer\index.js:40:19)
+    at Multipart.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\multer\lib\make-middleware.js:132:7)
+    at Multipart.emit (node:events:518:28)
+    at HeaderParser.cb (D:\React\valuetechsolutions\Backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\React\valuetechsolutions\Backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\React\valuetechsolutions\Backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (D:\React\valuetechsolutions\Backend\node_modules\streamsearch\lib\sbmh.js:248:10)
+    at SBMH.push (D:\React\valuetechsolutions\Backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (D:\React\valuetechsolutions\Backend\node_modules\busboy\lib\types\multipart.js:567:19)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+2025-08-21 18:16:22 | INFO | Environment: development
+2025-08-21 18:18:46 | INFO | Environment: development
+2025-08-21 18:18:53 | INFO | Environment: development
+2025-08-21 18:20:09 | INFO | Environment: development
+2025-08-21 18:20:32 | INFO | Environment: development
+2025-08-21 18:20:44 | INFO | Environment: development
+2025-08-21 18:21:22 | INFO | Environment: development
+2025-08-21 18:23:13 | INFO | Environment: development
+2025-08-21 18:27:47 | INFO | Environment: development
+2025-08-21 18:28:10 | INFO | Environment: development
+2025-08-21 18:28:31 | INFO | Environment: development
+2025-08-21 18:28:47 | INFO | Environment: development
+2025-08-21 18:29:07 | INFO | Environment: development
+2025-08-21 18:29:49 | INFO | Environment: development
+2025-08-21 18:30:32 | INFO | Environment: development
+2025-08-21 18:33:11 | ERROR | SyntaxError: Expected ',' or ']' after array element in JSON at position 890017 (line 10 column 15)
+    at JSON.parse (<anonymous>)
+    at parse (D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\types\json.js:77:19)
+    at D:\React\valuetechsolutions\Backend\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:238:16)
+    at done (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (D:\React\valuetechsolutions\Backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-08-21 18:35:58 | INFO | Environment: development
+2025-08-21 18:36:00 | INFO | Environment: development
+2025-08-21 18:36:05 | INFO | Environment: development
+2025-08-21 18:39:26 | INFO | Environment: development
+2025-08-21 18:39:36 | INFO | Environment: development
+2025-08-21 18:39:55 | INFO | Environment: development
+2025-08-21 18:40:02 | INFO | Environment: development
+2025-08-21 18:40:44 | INFO | Environment: development
+2025-08-21 18:40:49 | INFO | Environment: development
+2025-08-21 19:26:41 | INFO | Environment: development
+2025-08-22 06:39:45 | INFO | Environment: development
+2025-08-22 06:44:06 | INFO | Environment: development
+2025-08-22 06:45:48 | INFO | Environment: development
+2025-08-22 06:47:17 | INFO | Environment: development
+2025-08-22 06:48:06 | INFO | Environment: development
+2025-08-22 06:49:00 | INFO | Environment: development
+2025-08-22 06:49:10 | INFO | Environment: development
+2025-08-22 06:49:17 | INFO | Environment: development
+2025-08-22 06:49:23 | INFO | Environment: development
+2025-08-22 06:49:27 | INFO | Environment: development
+2025-08-22 06:49:32 | INFO | Environment: development
+2025-08-22 06:50:23 | INFO | Environment: development
+2025-08-22 06:51:09 | INFO | Environment: development
+2025-08-22 06:52:34 | INFO | Environment: development
+2025-08-22 06:56:20 | INFO | Environment: development
+2025-08-22 07:03:34 | INFO | Environment: development
+2025-08-22 07:03:45 | INFO | Environment: development
+2025-08-22 07:03:56 | INFO | Environment: development
+2025-08-22 07:04:23 | INFO | Environment: development
+2025-08-22 07:05:00 | INFO | Environment: development
+2025-08-22 07:05:12 | INFO | Environment: development
+2025-08-22 07:05:35 | INFO | Environment: development
+2025-08-22 07:05:44 | INFO | Environment: development
+2025-08-22 07:42:25 | INFO | Environment: development
+2025-08-22 07:46:53 | INFO | Environment: development
+2025-08-22 07:47:05 | INFO | Environment: development
+2025-08-22 07:47:14 | INFO | Environment: development
+2025-08-22 07:47:24 | INFO | Environment: development
+2025-08-22 07:47:34 | INFO | Environment: development
+2025-08-22 07:47:43 | INFO | Environment: development
+2025-08-22 07:47:53 | INFO | Environment: development
+2025-08-22 07:48:07 | INFO | Environment: development
+2025-08-22 07:48:31 | INFO | Environment: development
+2025-08-22 07:48:45 | INFO | Environment: development
+2025-08-22 07:52:43 | INFO | Environment: development
+2025-08-22 07:53:48 | INFO | Environment: development
+2025-08-22 07:55:17 | INFO | Environment: development
+2025-08-22 07:55:39 | INFO | Environment: development
+2025-08-22 09:49:30 | INFO | Environment: development
+2025-08-22 09:51:57 | INFO | Environment: development
+2025-08-22 09:58:16 | INFO | Environment: development
+2025-08-22 10:10:48 | INFO | Environment: development
+2025-08-22 11:04:15 | INFO | Environment: development
+2025-08-29 13:41:56 | INFO | Environment: development
+2025-08-29 13:42:46 | INFO | Environment: development
+2025-08-29 13:43:01 | INFO | Environment: development
+2025-08-29 13:43:11 | INFO | Environment: development
+2025-08-29 13:43:30 | ERROR | ReferenceError: Cannot access 'order' before initialization
+    at Object.createOrder (D:\React\valuetechsolutions\Backend\src\models\order.js:317:33)
+    at exports.create (D:\React\valuetechsolutions\Backend\src\controllers\orderController.js:108:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-29 13:44:59 | INFO | Environment: development
+2025-08-29 13:45:05 | INFO | Environment: development
+2025-08-29 13:52:33 | INFO | Environment: development
+2025-08-29 13:53:22 | INFO | Environment: development
+2025-08-29 13:57:02 | INFO | Environment: development
+2025-08-29 13:57:36 | INFO | Environment: development
+2025-08-29 13:59:05 | INFO | Environment: development
+2025-08-29 13:59:13 | INFO | Environment: development
+2025-08-29 13:59:25 | INFO | Environment: development
+2025-08-29 14:02:02 | INFO | Environment: development
+2025-08-29 14:02:17 | INFO | Environment: development
+2025-08-29 14:02:29 | INFO | Environment: development
+2025-08-29 14:02:45 | INFO | Environment: development
+2025-08-29 14:04:11 | INFO | Environment: development
+2025-08-29 14:04:39 | INFO | Environment: development
+2025-08-29 14:09:51 | INFO | Environment: development
+2025-08-29 14:10:33 | INFO | Environment: development
+2025-08-29 14:11:38 | INFO | Environment: development
+2025-08-29 14:14:03 | INFO | Environment: development
+2025-08-29 14:14:16 | INFO | Environment: development
+2025-08-29 14:14:26 | INFO | Environment: development
+2025-08-29 14:15:08 | INFO | Environment: development
+2025-08-29 14:15:16 | INFO | Environment: development
+2025-08-29 14:15:54 | INFO | Environment: development
+2025-08-29 14:17:08 | INFO | Environment: development
+2025-08-29 14:17:49 | INFO | Environment: development
+2025-08-29 14:17:54 | INFO | Environment: development
+2025-08-29 14:19:47 | INFO | Environment: development
+2025-08-29 14:20:04 | INFO | Environment: development
+2025-08-29 14:20:09 | INFO | Environment: development
+2025-08-29 14:20:22 | INFO | Environment: development
+2025-08-29 14:21:12 | INFO | Environment: development
+2025-08-29 14:21:20 | INFO | Environment: development
+2025-08-29 14:21:22 | INFO | Environment: development
+2025-08-29 14:21:24 | INFO | Environment: development
+2025-08-29 14:21:37 | INFO | Environment: development
+2025-08-29 14:21:40 | INFO | Environment: development
+2025-08-29 14:22:00 | INFO | Environment: development
+2025-08-29 14:22:04 | INFO | Environment: development
+2025-08-29 14:22:39 | INFO | Environment: development
+2025-08-29 14:26:03 | INFO | Environment: development
+2025-08-29 14:30:15 | ERROR | error: insert into "orders" ("alternative_contact", "child_category_id", "contact", "created_at", "created_by", "current_status_id", "customer_name", "date_of_inspection", "manager_id", "officer_id", "order_number", "place_of_inspection", "registration_number") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) returning * - insert or update on table "orders" violates foreign key constraint "orders_current_status_id_foreign"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-29 14:31:25 | INFO | Environment: development
+2025-08-29 14:31:39 | ERROR | error: insert into "orders" ("alternative_contact", "child_category_id", "contact", "created_at", "created_by", "current_status_id", "customer_name", "date_of_inspection", "manager_id", "officer_id", "order_number", "place_of_inspection", "registration_number") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) returning * - insert or update on table "orders" violates foreign key constraint "orders_current_status_id_foreign"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-29 14:33:54 | INFO | Environment: development
+2025-08-29 14:34:00 | INFO | Environment: development
+2025-08-29 14:34:05 | INFO | Environment: development
+2025-08-29 14:37:06 | INFO | Environment: development
+2025-08-29 14:37:14 | INFO | Environment: development
+2025-08-29 14:37:28 | INFO | Environment: development
+2025-08-29 14:37:30 | INFO | Environment: development
+2025-08-29 14:37:43 | INFO | Environment: development
+2025-08-29 14:37:49 | INFO | Environment: development
+2025-08-29 14:37:56 | INFO | Environment: development
+2025-08-29 15:01:59 | INFO | Environment: development
+2025-08-29 15:02:28 | INFO | Environment: development
+2025-08-29 15:02:29 | INFO | Environment: development
+2025-08-29 15:04:00 | INFO | Environment: development
+2025-08-29 15:04:09 | INFO | Environment: development
+2025-08-29 15:08:11 | INFO | Environment: development
+2025-08-29 15:08:22 | INFO | Environment: development
+2025-08-29 15:08:39 | INFO | Environment: development
+2025-08-29 15:08:52 | INFO | Environment: development
+2025-08-29 15:09:03 | INFO | Environment: development
+2025-08-29 15:19:14 | INFO | Environment: development
+2025-08-29 15:31:07 | INFO | Environment: development
+2025-08-29 15:31:08 | INFO | Environment: development
+2025-08-29 15:31:22 | INFO | Environment: development
+2025-08-29 15:31:37 | INFO | Environment: development
+2025-08-29 15:31:59 | INFO | Environment: development
+2025-08-29 15:32:30 | INFO | Environment: development
+2025-08-29 15:32:32 | INFO | Environment: development
+2025-08-29 15:33:30 | INFO | Environment: development
+2025-08-29 15:34:14 | INFO | Environment: development
+2025-08-29 15:34:32 | INFO | Environment: development
+2025-08-29 15:34:34 | INFO | Environment: development
+2025-08-29 15:35:07 | INFO | Environment: development
+2025-08-29 15:35:28 | INFO | Environment: development
+2025-08-29 15:36:48 | INFO | Environment: development
+2025-08-29 15:36:49 | INFO | Environment: development
+2025-08-29 15:37:10 | INFO | Environment: development
+2025-08-29 15:37:12 | INFO | Environment: development
+2025-08-29 15:39:13 | INFO | Environment: development
+2025-08-29 15:45:42 | INFO | Environment: development
+2025-08-29 15:45:52 | INFO | Environment: development
+2025-08-29 15:45:55 | INFO | Environment: development
+2025-08-29 15:47:36 | INFO | Environment: development
+2025-08-29 15:47:39 | INFO | Environment: development
+2025-08-29 15:47:52 | INFO | Environment: development
+2025-08-29 15:48:05 | INFO | Environment: development
+2025-08-29 15:52:17 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-08-30 07:08:05 | INFO | Environment: development
+2025-08-30 07:08:06 | INFO | Environment: development
+2025-08-30 07:08:17 | INFO | Environment: development
+2025-08-30 07:12:15 | INFO | Environment: development
+2025-08-30 07:12:39 | INFO | Environment: development
+2025-08-30 07:13:29 | INFO | Environment: development
+2025-08-30 07:14:03 | INFO | Environment: development
+2025-08-30 07:16:30 | INFO | Environment: development
+2025-08-30 07:31:47 | INFO | Environment: development
+2025-08-30 07:31:48 | INFO | Environment: development
+2025-08-30 07:32:10 | INFO | Environment: development
+2025-08-30 07:32:12 | INFO | Environment: development
+2025-08-30 07:32:30 | INFO | Environment: development
+2025-08-30 07:32:31 | INFO | Environment: development
+2025-08-30 07:33:33 | INFO | Environment: development
+2025-08-30 07:33:38 | INFO | Environment: development
+2025-08-30 07:33:53 | INFO | Environment: development
+2025-08-30 07:34:07 | INFO | Environment: development
+2025-08-30 07:34:46 | INFO | Environment: development
+2025-08-30 07:35:18 | INFO | Environment: development
+2025-08-30 07:35:41 | INFO | Environment: development
+2025-08-30 07:36:09 | INFO | Environment: development
+2025-08-30 07:37:20 | INFO | Environment: development
+2025-08-30 07:37:34 | INFO | Environment: development
+2025-08-30 07:37:40 | INFO | Environment: development
+2025-08-30 07:37:47 | INFO | Environment: development
+2025-08-30 07:37:50 | INFO | Environment: development
+2025-08-30 07:37:58 | INFO | Environment: development
+2025-08-30 07:38:12 | INFO | Environment: development
+2025-08-30 07:41:04 | INFO | Environment: development
+2025-08-30 07:41:31 | INFO | Environment: development
+2025-08-30 07:41:43 | INFO | Environment: development
+2025-08-30 07:41:56 | INFO | Environment: development
+2025-08-30 07:42:49 | INFO | Environment: development
+2025-08-30 09:09:33 | INFO | Environment: development
+2025-08-30 09:11:45 | INFO | Environment: development
+2025-08-30 09:12:18 | INFO | Environment: development
+2025-08-30 09:20:14 | INFO | Environment: development
+2025-08-30 09:20:17 | INFO | Environment: development
+2025-08-30 09:23:04 | INFO | Environment: development
+2025-08-30 09:23:34 | INFO | Environment: development
+2025-08-30 09:24:35 | INFO | Environment: development
+2025-08-30 09:26:55 | INFO | Environment: development
+2025-08-30 09:27:03 | INFO | Environment: development
+2025-08-30 09:27:14 | INFO | Environment: development
+2025-08-30 09:27:26 | INFO | Environment: development
+2025-08-30 09:27:52 | INFO | Environment: development
+2025-08-30 09:32:22 | INFO | Environment: development
+2025-08-30 09:32:31 | INFO | Environment: development
+2025-08-30 09:32:46 | INFO | Environment: development
+2025-08-30 09:32:54 | INFO | Environment: development
+2025-08-30 09:34:44 | INFO | Environment: development
+2025-08-30 09:35:29 | INFO | Environment: development
+2025-08-30 09:35:52 | INFO | Environment: development
+2025-08-30 09:36:15 | INFO | Environment: development
+2025-08-30 09:38:13 | INFO | Environment: development
+2025-08-30 09:38:23 | INFO | Environment: development
+2025-08-30 09:38:36 | INFO | Environment: development
+2025-08-30 09:38:46 | INFO | Environment: development
+2025-08-30 09:38:53 | INFO | Environment: development
+2025-08-30 09:39:01 | INFO | Environment: development
+2025-08-30 09:42:50 | INFO | Environment: development
+2025-08-30 09:43:02 | INFO | Environment: development
+2025-08-30 09:43:18 | INFO | Environment: development
+2025-08-30 09:44:51 | INFO | Environment: development
+2025-08-30 09:45:27 | INFO | Environment: development
+2025-08-30 09:50:09 | INFO | Environment: development
+2025-08-30 09:50:18 | INFO | Environment: development
+2025-08-30 09:50:30 | INFO | Environment: development
+2025-08-30 09:50:46 | INFO | Environment: development
+2025-08-30 09:51:35 | INFO | Environment: development
+2025-08-30 10:17:54 | INFO | Environment: development
+2025-08-30 10:36:49 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-08-30 10:36:55 | ERROR | Error: Invalid password
+    at exports.login (D:\React\valuetechsolutions\Backend\src\controllers\authController.js:93:13)
+2025-08-30 10:45:10 | INFO | Environment: development
+2025-08-30 10:51:53 | INFO | Environment: development
+2025-08-30 10:52:05 | INFO | Environment: development
+2025-08-30 10:53:42 | INFO | Environment: development
+2025-08-30 11:10:12 | INFO | Environment: development
+2025-08-30 13:19:07 | INFO | Environment: development
+2025-08-30 13:28:50 | ERROR | error: insert into "orders" ("alternative_contact", "child_category_id", "contact", "created_at", "created_by", "current_status_id", "customer_name", "date_of_inspection", "manager_id", "officer_id", "order_number", "place_of_inspection", "registration_number") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) returning * - insert or update on table "orders" violates foreign key constraint "orders_current_status_id_foreign"
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-30 13:29:20 | INFO | Environment: development
+2025-08-30 13:30:41 | INFO | Environment: development
+2025-08-30 13:30:48 | INFO | Environment: development
+2025-08-30 13:33:16 | INFO | Environment: development
+2025-08-30 13:33:20 | INFO | Environment: development
+2025-08-30 13:36:01 | INFO | Environment: development
