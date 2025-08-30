@@ -13,3 +13,4 @@ service-account.json
 # Optional: ignore coverage reports
 coverage/
 backup/
+uploads/
