@@ -1,6 +1,6 @@
 const { PROTECTED_ROLE } = require("../constants/protectedRoles");
-const User = require("../models/user");
-const Role = require("../models/role");
+const User = require("../models/user/user");
+const Role = require("../models/permissions/role");
 
 module.exports = async function protectIfProtectedRole(req, res, next) {
   const { id } = req.params || req.body;

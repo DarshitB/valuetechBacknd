@@ -37,6 +37,15 @@ async function uploadMultipart(req, res) {
     const files = req.files;
     const { id } = req.verifier;
 
+    // Debug logging to help identify the issue
+   /*  console.log('📁 Upload request received:');
+    console.log('📋 Body fields:', Object.keys(req.body));
+    console.log('📁 Files received:', files ? files.length : 'No files');
+    if (files && files.length > 0) {
+      console.log('📋 First file fieldname:', files[0].fieldname);
+      console.log('📋 First file mimetype:', files[0].mimetype);
+    } */
+
     if (!order_number) return res.status(400).json({ error: 'order_number is required' });
     if (!files || !Array.isArray(files) || files.length === 0) return res.status(400).json({ error: 'No files uploaded' });
 

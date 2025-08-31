@@ -14,7 +14,7 @@ exports.up = async function (knex) {
     // Media information
     table.text("media_url").notNullable(); // Local file path for direct access
     table.string("media_type").notNullable(); // 'pdf', 'image', 'excel', 'other'
-    table.string("document_type").notNullable(); // 'collage', 'generated', 'other'
+    table.string("document_type").notNullable(); // 'collage', 'report', 'documents', 'other'
     table.string("created_type").notNullable(); // 'generate', 'upload', 'other'
     
     // Audit fields

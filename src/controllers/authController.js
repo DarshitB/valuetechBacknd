@@ -1,5 +1,5 @@
-const User = require("../models/user");
-const Role = require("../models/role");
+const User = require("../models/user/user");
+const Role = require("../models/permissions/role");
 const db = require("../../db");
 
 const bcrypt = require("bcrypt");

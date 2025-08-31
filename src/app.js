@@ -4,26 +4,42 @@ const path = require("path");
 const errorHandler = require("./middleware/errorHandler");
 const logger = require("./utils/logger");
 
-// Import routes
+// Auth routes
 const authRoutes = require("./routes/authRoutes");
-const roleRoute = require("./routes/roleRoutes");
-const userRoutes = require("./routes/userRoutes");
-const permissionRoutes = require("./routes/permissionRoutes");
-const stateRoutes = require("./routes/stateRoutes");
-const cityRoutes = require("./routes/cityRoutes");
-const bankRoutes = require("./routes/bankRoutes");
-const bankBranchRoutes = require("./routes/bankBranchRoutes");
-const categoryRoutes = require("./routes/categoryRoutes");
-const subcategoryRoutes = require("./routes/subcategoryRoutes");
-const childCategoryRoutes = require("./routes/childCategoryRoutes");
-const officerRouter = require("./routes/officerRouter");
-const orderRoutes = require("./routes/orderRoutes");
+
+// Permissions routes
+const permissionRoutes = require("./routes/permissions/permissionRoutes");
+const roleRoute = require("./routes/permissions/roleRoutes");
+
+// Bank routes
+const bankRoutes = require("./routes/bank/bankRoutes");
+const bankBranchRoutes = require("./routes/bank/bankBranchRoutes");
+
+// Category routes
+const categoryRoutes = require("./routes/category/categoryRoutes");
+const subcategoryRoutes = require("./routes/category/subcategoryRoutes");
+const childCategoryRoutes = require("./routes/category/childCategoryRoutes");
+
+// Location routes
+const cityRoutes = require("./routes/location/cityRoutes");
+const stateRoutes = require("./routes/location/stateRoutes");
+
+// User routes
+const userRoutes = require("./routes/user/userRoutes");
+const officerRouter = require("./routes/user/officerRouter");
+
+// Orders routes
+const orderRoutes = require("./routes/orders/orderRoutes");
+const orderMediaPortalRoutes = require("./routes/orders/orderMediaPortalRoutes");
+const orderMediaDocumentRoutes = require("./routes/orders/orderMediaDocumentRoutes");
+const collageGeneratorRoutes = require("./routes/orders/collageGeneratorRoutes");
+
+// Field Verifier routes
 const fieldVerifierPortalOperationsRoutes = require("./routes/fieldVerifier/portalOperationsRoutes");
 const mobileAuthRoutes = require("./routes/fieldVerifier/authRoutes");
 const mobilApis = require("./routes/fieldVerifier/mobilApi");
 const orderMediaRoutes = require("./routes/fieldVerifier/orderMediaRoutes");
-const orderMediaPortalRoutes = require("./routes/orderMediaPortalRoutes");
-const collageGeneratorRoutes = require("./routes/collageGeneratorRoutes");
+// End of Field Verifier routes
 
 const app = express();
 
@@ -110,6 +126,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/field-verifiers", fieldVerifierPortalOperationsRoutes);
 app.use("/api/order-media", orderMediaPortalRoutes);
 app.use("/api/collage-generator", collageGeneratorRoutes);
+app.use("/api/order-media-document", orderMediaDocumentRoutes);
 
 /* mobile APIs */
 app.use("/api/mobile/auth", mobileAuthRoutes);

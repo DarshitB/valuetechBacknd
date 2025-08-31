@@ -1240,3 +1240,33 @@
     at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
     at Readable.push (node:internal/streams/readable:392:5)
     at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-31 14:05:41 | ERROR | MulterError: Unexpected field
+    at wrappedFileFilter (D:\React\valuetechsolutions\Backend\node_modules\multer\index.js:40:19)
+    at Multipart.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\multer\lib\make-middleware.js:132:7)
+    at Multipart.emit (node:events:518:28)
+    at HeaderParser.cb (D:\React\valuetechsolutions\Backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\React\valuetechsolutions\Backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\React\valuetechsolutions\Backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (D:\React\valuetechsolutions\Backend\node_modules\streamsearch\lib\sbmh.js:200:10)
+    at SBMH.push (D:\React\valuetechsolutions\Backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (D:\React\valuetechsolutions\Backend\node_modules\busboy\lib\types\multipart.js:567:19)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+2025-08-31 14:18:36 | ERROR | error: insert into "order_media_documents" ("created_at", "created_by", "document_type", "media_type", "media_url", "order_id") values ($1, $2, $3, $4, $5, $6) returning "id" - null value in column "created_type" of relation "order_media_documents" violates not-null constraint
+    at Parser.parseErrorMessage (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:285:98)
+    at Parser.handlePacket (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:122:29)
+    at Parser.parse (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\parser.js:35:38)
+    at Socket.<anonymous> (D:\React\valuetechsolutions\Backend\node_modules\pg-protocol\dist\index.js:11:42)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-08-31 14:54:21 | ERROR | Error: No files were successfully uploaded
+    at exports.upload (D:\React\valuetechsolutions\Backend\src\controllers\orderMediaDocumentController.js:171:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-31 14:54:29 | ERROR | Error: No files were successfully uploaded
+    at exports.upload (D:\React\valuetechsolutions\Backend\src\controllers\orderMediaDocumentController.js:171:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-31 14:54:45 | ERROR | Error: No files were successfully uploaded
+    at exports.upload (D:\React\valuetechsolutions\Backend\src\controllers\orderMediaDocumentController.js:171:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

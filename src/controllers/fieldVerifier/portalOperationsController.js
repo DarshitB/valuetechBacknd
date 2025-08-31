@@ -1,6 +1,6 @@
 const FieldVerifier = require("../../models/fieldVerifier/portal_operations");
-const User = require("../../models/user");
-const City = require("../../models/city");
+const User = require("../../models/user/user");
+const City = require("../../models/location/city");
 const bcrypt = require("bcrypt");
 const {
   NotFoundError,

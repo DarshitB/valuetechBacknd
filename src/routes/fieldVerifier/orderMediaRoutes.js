@@ -27,7 +27,7 @@ router.use(mobileAuth);
 // Routes
 router.post(
   "/upload",
-  upload.array("files"),
+  upload.any(), // Accept any field name for files
   orderMediaController.uploadMultipart
 );
 router.post(
