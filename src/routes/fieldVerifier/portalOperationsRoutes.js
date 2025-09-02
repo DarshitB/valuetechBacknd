@@ -34,7 +34,7 @@ router.patch(
   "/:id/toggle-status",
   checkPermission("edit_field_verifier"), // Check if user has permission to edit
   beforeUpdateLogger("field_verifiers", (req) => req.params.id), // Log old data before update
-  activityLogger("field_verifiers", (req) => req.params.id), // Log update activity
+  activityLogger("field_verifiers", (req) => req.params.id, "update Status"), // Log update activity
   fieldVerifierController.toggleActiveStatus
 );
 router.delete(

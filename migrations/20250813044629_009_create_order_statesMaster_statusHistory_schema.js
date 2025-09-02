@@ -45,6 +45,11 @@ exports.up = async function (knex) {
     table.integer("current_status_id").unsigned().notNullable().defaultTo(1)
       .references("id").inTable("order_status_master").onDelete("RESTRICT");
 
+    // Payment columns
+    table.string("payment_amount").nullable();
+    table.string("payment_mode").nullable();
+    table.string("payment_status").nullable();
+
     // Audit columns
     table.timestamp("created_at").defaultTo(knex.fn.now());
     table.integer("created_by").unsigned()

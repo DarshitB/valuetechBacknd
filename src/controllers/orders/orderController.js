@@ -314,6 +314,48 @@ exports.update = async (req, res, next) => {
   }
 };
 
+// Adding payment details (add/update without strict validation)
+exports.addingPayment = async (req, res, next) => {
+  try {
+    const orderId = req.params.id;
+    const { payment_amount, payment_mode, payment_status } = req.body;
+
+    // Ensure order exists and user has access
+    const existingOrder = await Order.findById(orderId, req.user);
+    if (!existingOrder) throw new NotFoundError("Order not found");
+
+    const updateData = {
+      payment_amount:
+        payment_amount !== undefined ? payment_amount : existingOrder.payment_amount,
+      payment_mode:
+        payment_mode !== undefined ? payment_mode : existingOrder.payment_mode,
+      payment_status:
+        payment_status !== undefined ? payment_status : existingOrder.payment_status,
+    };
+
+    const updated = await Order.updatePaymentStatus(orderId, updateData, req.user?.id);
+    
+    // Log activity in status history for audit trail
+    const statusHistoryData = {
+      order_id: orderId,
+      activity_extra: "Payment Status Updated",
+      changed_by: req.user?.id,
+      changed_at: new Date(),
+    };
+    await OrderStatusHistory.createStatusHistory(statusHistoryData);
+
+    res.status(200).json({
+      id: updated.id,
+      payment_amount: updated.payment_amount,
+      payment_mode: updated.payment_mode,
+      payment_status: updated.payment_status,
+      updated_at: updated.updated_at,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
 // Soft Delete Order
 exports.softDelete = async (req, res, next) => {
   try {

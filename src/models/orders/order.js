@@ -34,6 +34,9 @@ const order = {
         "orders.customer_name",
         "orders.contact",
         "orders.alternative_contact",
+        "orders.payment_amount",
+        "orders.payment_mode",
+        "orders.payment_status",
         "orders.officer_id",
         "officer_user.name as officer_name",
         "officer_user.email as officer_email",
@@ -113,6 +116,9 @@ const order = {
         "orders.customer_name",
         "orders.contact",
         "orders.alternative_contact",
+        "orders.payment_amount",
+        "orders.payment_mode",
+        "orders.payment_status",
         "orders.officer_id",
         "officer_user.name as officer_name",
         "officer_user.email as officer_email",
@@ -178,6 +184,9 @@ const order = {
         "orders.customer_name",
         "orders.contact",
         "orders.alternative_contact",
+        "orders.payment_amount",
+        "orders.payment_mode",
+        "orders.payment_status",
         "orders.officer_id",
         "officer_user.name as officer_name",
         "officer_user.email as officer_email",
@@ -307,6 +316,18 @@ const order = {
         ...data,
         updated_at: new Date(),
         updated_by: userId,
+      })
+      .returning("*");
+    return order;
+  },
+
+  updatePaymentStatus: async (id, data) => {
+    const [order] = await db("orders")
+      .where({ id })
+      .update({
+        payment_status: data.payment_status,
+        payment_amount: data.payment_amount,
+        payment_mode: data.payment_mode,
       })
       .returning("*");
     return order;

@@ -70,6 +70,8 @@ async function updateMediaStatus(req, res) {
     const { updates } = req.body;
     const { id: userId } = req.user; // Assuming you have user info in req.user
 
+    /* console.log("updates", updates); */
+    
     if (!updates || !Array.isArray(updates) || updates.length === 0) {
       return res.status(400).json({
         success: false,
@@ -108,6 +110,8 @@ async function updateMediaStatus(req, res) {
       updates,
       userId
     );
+
+    res.locals.id = updatedRecords[0].id;
 
     res.json({
       success: true,

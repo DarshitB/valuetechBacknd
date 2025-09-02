@@ -11,22 +11,26 @@ router.use(auth);
 // Upload document
 router.post(
   "/upload",
-  /* checkPermission("document.upload"), */
-  activityLogger("order_media_documents", (req, res) => res.locals.documentId),
+  checkPermission("add_order_media_documents"),
+  activityLogger(
+    "order_media_documents",
+    (req, res) => res.locals.documentId,
+    "Upload Media Documents"
+  ),
   orderMediaDocumentController.upload
 );
 
 // Get documents by order ID (more specific route first)
 router.get(
   "/:orderId",
-  /* checkPermission("document.view"), */
+  checkPermission("view_order_media_documents"),
   orderMediaDocumentController.getCollagesByOrderId
 );
 
-// Delete document (soft delete)
+// Delete document (soft delete with activity log)
 router.delete(
   "/:id",
-  /* checkPermission("document.delete"), */
+  checkPermission("delete_order_media_documents"),
   activityLogger("order_media_documents", (req) => req.params.id),
   orderMediaDocumentController.delete
 );

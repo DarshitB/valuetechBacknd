@@ -9,7 +9,7 @@ const sanitize = (data) => {
   return clone;
 };
 
-const activityLogger = (tableName, getRecordId) => {
+const activityLogger = (tableName, getRecordId, specificAction) => {
   return async (req, res, next) => {
     res.on("finish", async () => {
       try {
@@ -19,7 +19,7 @@ const activityLogger = (tableName, getRecordId) => {
           put: "update",
           patch: "update",
           delete: "delete",
-        };
+        }; 
 
         const action = actionMap[method];
         if (!action) return;
@@ -93,7 +93,7 @@ const activityLogger = (tableName, getRecordId) => {
 
         await logActivity({
           user_id,
-          action,
+          action: specificAction !== null && specificAction !== undefined ? specificAction : action,
           table_name: tableName,
           record_id,
           old_data: oldData,

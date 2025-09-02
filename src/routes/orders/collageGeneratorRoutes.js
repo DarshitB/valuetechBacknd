@@ -11,8 +11,8 @@ router.use(auth); // Apply authentication middleware to all routes
 
 router.post(
   "/generate",
-  /* checkPermission("collage.generate"), */ // Check if user has permission to generate collages
-  activityLogger("order_media_documents", (req, res) => res.locals.documentId), // Log collage generation activity
+  checkPermission("generate_order_collage"), // Check if user has permission to generate collages
+  activityLogger("order_media_documents", (req, res) => res.locals.documentId, "Collage Generation"), // Log collage generation activity
   collageGeneratorController.generateCollage
 );
 

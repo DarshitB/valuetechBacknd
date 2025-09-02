@@ -52,6 +52,7 @@ exports.seed = async function (knex) {
     "view_field_verifier",
     "add_field_verifier",
     "edit_field_verifier",
+    "edit_field_verifier_status",
     "delete_field_verifier",
     "view_field_verifier_login",
     "delete_field_verifier_login",
@@ -60,6 +61,23 @@ exports.seed = async function (knex) {
     "add_order",
     "edit_order",
     "delete_order",
+    "view_order_details",
+
+    "view_order_recent_activity",
+
+    "view_order_comments",
+    "add_order_comments",
+
+    "view_order_media_files",
+    "add_order_media_files",
+    "approve_reject_order_media_files",
+
+    "generate_order_collage",
+
+    "view_order_media_documents",
+    "add_order_media_documents",
+    "download_order_media_documents",
+    "delete_order_media_documents",
   ];
 
   // Insert permissions

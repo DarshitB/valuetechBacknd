@@ -8,9 +8,10 @@ exports.up = async function(knex) {
     table.increments("id").primary();
 
     table.integer("user_id").unsigned().references("id").inTable("users").onDelete("SET NULL");
-    table.enu("action", ["create", "update", "delete", "login", "logout"]).notNullable();
+    //table.enu("action", ["create", "update", "delete", "login", "logout"]).notNullable();
+    table.string("action", 150).notNullable();
 
-    table.string("table_name", 100).nullable();
+    table.string("table_name", 150).nullable();
     table.integer("record_id").nullable();
 
     table.jsonb("old_data").nullable();

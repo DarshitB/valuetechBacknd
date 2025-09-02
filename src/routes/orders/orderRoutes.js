@@ -27,6 +27,13 @@ router.put(
   activityLogger("orders", (req) => req.params.id), // Log update
   orderController.update
 );
+router.patch(
+  "/:id/payment",
+  checkPermission("edit_order"),
+  beforeUpdateLogger("orders", (req) => req.params.id),
+  activityLogger("orders", (req) => req.params.id),
+  orderController.addingPayment
+);
 router.delete(
   "/:id",
   checkPermission("delete_order"), // Check permission to delete order
